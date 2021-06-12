@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <a href="checkout.html">Cart</a><span id="itemCount"></span>
 
     </header>
+    <main>
+        <form id="stories">
+            <fieldset>
+                <label for="userName">Your Name</label>
+                <input type="text" name="userName" id="userName">
+                <br>
+                <br>
+                <label for="programName">Program</label>
+                <input type="text" id="programName" name="programName">
+                <br>
+                <br>
+                <label for="story">Tell your Story</label>
+                <br>
+                <br>
+                <textarea name="story" id="storyText" cols="30" rows="10"></textarea>
+                <br>
+                <button id="submit">Add your Story</button>
 
-    
+
+            </fieldset>
+        </form>
+        <div id="results">
+
+        </div>
+
+    </main>
+
+
     <script src="Js/programs.js"></script>
     <script src="JS/cart.js"></script>
+    <script src=JS/stories.js></script>
 </body>
+
 </html>
