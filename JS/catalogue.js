@@ -10,22 +10,31 @@ function populateForm() {
   //TODO: Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('allprograms');
 
-
+ 
   for (let i in Product.allProducts) {
 
  // console.log("hi");
  // let = document.createElement('option');
+ 
+ let quantity = document.createElement("INPUT");
+ quantity.setAttribute("type", "number");
+ quantity.setAttribute("value", "");
+ let value=quantity.getAttribute("value");
+ document.write(value);
+ console.log(value);
  let checkbox = document.createElement("INPUT");
- let quantity=document.createElement('number');
+ 
  checkbox.setAttribute("type", "checkbox");
 
+ selectElement.appendChild(checkbox);
  selectElement.appendChild(quantity);
-  selectElement.appendChild(checkbox);
-
+  
   checkbox.name=Product.allProducts[i].name;
  
   checkboxarray.push(checkbox);
   quantityarray.push(quantity);
+  //  console.log(quantity.value+"tr");
+  // console.log(quantityarray[0]);
 
   }
 
@@ -58,21 +67,25 @@ function handleSubmit(event) {
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
-
+  let quant=0;
 
   for (let i = 0; i < checkboxarray.length; i++) {
-    
+    // console.log(i+"first");
     
     if (checkboxarray[i].checked) {
-
+      // console.log(i+"first");
+    
         checkedbox.push(checkboxarray[i]);
 
-        for (let j = 0; j < checkedbox.length; j++) {
+        //  for (let j = 0; j < quantityarray.length; j++) {
+        //  quant=  quantityarray[j];
+        //  console.log(quant+"forresult")
 
-            cart.addItem(checkboxarray[i].name,quantityarray[j])
-
-            
-        }
+            // cart.addItem(checkboxarray[i].name,3)
+          // }
+          cart.addItem(checkboxarray[i].name,3)
+        // console.log(quant+"result"); 
+        checkboxarray[i]=false;}
         
     }
       
@@ -87,19 +100,19 @@ function addSelectedItemToCart() {
 // count++;
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
-}
+
 
 let count=0;
-// TODO: Update the cart count in the header nav with the number of items in the Cart
+// // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
   
   let counter=document.getElementById("itemCount");
-  console.log(count+'try');
+  // console.log(count+'try');
 
   count=cart.items.length;
   
   //counter.textContent=count;
-  console.log(counter);
+  console.log(count+"count");
 
 
 }

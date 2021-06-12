@@ -17,7 +17,7 @@ const Cart = function (items) {
     // TODO: Fill in this instance method to create a new CartItem and add it to this.items
      let newItem  = new CartItem(product,quantity);
      this.items.push(newItem);
-     console.log("tryit");
+    //  console.log("tryit");
      
   };
   
