@@ -17,16 +17,16 @@ function loadCart() {
 function renderCart() {
     
   loadCart();
-//   clearCart(); remider
+ clearCart(); 
   showCart();
 }
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)   reminderr
-// function clearCart() { 
+function clearCart() { 
 
-//   let parent = document.getElementsByTagName('tbody')[0];
-//   parent.textContent='';
-// }
+  let parent = document.getElementsByTagName('tbody')[0];
+  parent.textContent='';
+}
  
 //  console.log("test");
 
@@ -60,6 +60,11 @@ function showCart() {
  let productTd=document.createElement('td');
  productTd.textContent=cart.items[i].product;
  tr.appendChild(productTd);
+
+ let priceTd=document.createElement('td');
+ priceTd.textContent=cart.items[i].price;
+ tr.appendChild(priceTd);
+ 
    } }
 
 function removeItemFromCart(event) {
