@@ -5,17 +5,9 @@ const Cart = function (items) {
   
   };
 
-  Cart.prototype.addItem = function (product, quantity) {
-     let newItem  = new CartItem(product,quantity);
-     this.items.push(newItem);
-     console.log("tryit");
-     
-  };
+  Cart.prototype.addItem = function (product, quantity,price) {
 
-
-  Cart.prototype.addItem = function (product, quantity) {
-    // TODO: Fill in this instance method to create a new CartItem and add it to this.items
-     let newItem  = new CartItem(product,quantity);
+     let newItem  = new CartItem(product,quantity,price);
      this.items.push(newItem);
      console.log("tryit");
      
@@ -34,41 +26,32 @@ const Cart = function (items) {
     //  localStorage.removeItem(item);
   };
   
-  const CartItem = function (product, quantity) {
+  const CartItem = function (product, quantity, price) {
     this.product = product;
     this.quantity = quantity;
+        this.price=price;
+
   };
   
   // Product contructor.
-  const Product = function (filePath, name) {
+  const Product = function (filePath,name,price) {
     this.filePath = filePath;
     this.name = name;
+    this.price=price;
+
     Product.allProducts.push(this);
   };
   Product.allProducts = [];
   
   function generateCatalog() {
-    new Product('assets/bag.jpg', 'Bag');
-    new Product('assets/banana.jpg', 'Banana');
-    new Product('assets/bathroom.jpg', 'Bathroom');
-    new Product('assets/boots.jpg', 'Boots');
-    new Product('assets/breakfast.jpg', 'Breakfast');
-    new Product('assets/bubblegum.jpg', 'Bubblegum');
-    new Product('assets/chair.jpg', 'Chair');
-    new Product('assets/cthulhu.jpg', 'Cthulhu');
-    new Product('assets/dog-duck.jpg', 'Dog-Duck');
-    new Product('assets/dragon.jpg', 'Dragon');
-    new Product('assets/pen.jpg', 'Pen');
-    new Product('assets/pet-sweep.jpg', 'Pet Sweep');
-    new Product('assets/scissors.jpg', 'Scissors');
-    new Product('assets/shark.jpg', 'Shark');
-    new Product('assets/sweep.png', 'Sweep');
-    new Product('assets/tauntaun.jpg', 'Taun-Taun');
-    new Product('assets/unicorn.jpg', 'Unicorn');
-    new Product('assets/usb.gif', 'USB');
-    new Product('assets/water-can.jpg', 'Water Can');
-    new Product('assets/wine-glass.jpg', 'Wine Glass');
+    new Product('assets/bag.jpg', 'Wadi Ibn Hammad–Karak','70');
+    new Product('assets/banana.jpg', 'Dibeen Forest–Jerash','70');
+    new Product('assets/bathroom.jpg', 'Inaba Forest–Irbid','70');
+    new Product('assets/boots.jpg', 'Alarayes Lake+Wadi alshallala–Irbid','70');
+    new Product('assets/breakfast.jpg', 'Azraq wetland Reserve-Al-Azraq','60');
+    new Product('assets/bubblegum.jpg', 'Program-6','65');
+    new Product('assets/chair.jpg', 'Program-7','40');
+    
   }
-  
   // Initialize the app by creating the big list of products with images and names
   generateCatalog();

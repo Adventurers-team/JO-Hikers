@@ -2,7 +2,7 @@
 
 const cart = new Cart([]);
 
-
+let pricearray=[];
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
@@ -10,22 +10,32 @@ function populateForm() {
   //TODO: Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('allprograms');
 
-
+ //let price=0;
   for (let i in Product.allProducts) {
 
  // console.log("hi");
  // let = document.createElement('option');
- let checkbox = document.createElement("INPUT");
- let quantity=document.createElement('number');
+
+ let quantity = document.createElement("INPUT");
+ quantity.setAttribute("type", "number");
+ quantity.setAttribute("value", "");
+ let value=quantity.getAttribute("value");
+ document.write(value);
+ console.log(value);
+ let checkbox = document.createElement("INPUT"); 
  checkbox.setAttribute("type", "checkbox");
 
+ selectElement.appendChild(checkbox);
  selectElement.appendChild(quantity);
-  selectElement.appendChild(checkbox);
+  
 
   checkbox.name=Product.allProducts[i].name;
+   pricearray[i]=Product.allProducts[i].price;
  
   checkboxarray.push(checkbox);
   quantityarray.push(quantity);
+  //  console.log(quantity.value+"tr");
+  // console.log(quantityarray[0]);
 
   }
 
@@ -36,6 +46,8 @@ let checkboxarray=[];
 let quantityarray=[];
 
 let checkedbox=[];
+
+
 
 
 // When someone submits the form, we need to add the selected item to the cart
@@ -53,26 +65,41 @@ function handleSubmit(event) {
   //updateCartPreview();
 
 }
-
-
+let newquantity=[];
+let newprice=[];
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
-
+  let quant=0;
 
   for (let i = 0; i < checkboxarray.length; i++) {
-    
+    // console.log(i+"first");
     
     if (checkboxarray[i].checked) {
+      // console.log(i+"first");
+     newprice.push(pricearray[i]);
 
         checkedbox.push(checkboxarray[i]);
+        newquantity.push(quantityarray[i]);
 
-        for (let j = 0; j < checkedbox.length; j++) {
+        //  for (let j = 0; j < quantityarray.length; j++) {
+        //  quant=  quantityarray[j];
+        //  console.log(quant+"forresult")
 
-            cart.addItem(checkboxarray[i].name,quantityarray[j])
+            // cart.addItem(checkboxarray[i].name,3)
+          // }
 
-            
-        }
+          for (let x = 0; x < checkedbox.length; x++) {
+
+            cart.addItem(checkedbox[x].name, newquantity[x],newprice[x]);
+            checkedbox=[];
+            newquantity=[];
+            newprice=[];
+          }
+     
+          // cart.addItem(checkboxarray[i].name,3,newprice[x]);
+        // console.log(quant+"result"); 
+        checkboxarray[i]=false;}
         
     }
       
@@ -87,19 +114,19 @@ function addSelectedItemToCart() {
 // count++;
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
-}
+
 
 let count=0;
-// TODO: Update the cart count in the header nav with the number of items in the Cart
+// // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
   
   let counter=document.getElementById("itemCount");
-  console.log(count+'try');
+  // console.log(count+'try');
 
   count=cart.items.length;
   
   //counter.textContent=count;
-  console.log(counter);
+  console.log(count+"count");
 
 
 }
