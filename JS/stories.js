@@ -29,7 +29,7 @@ function submitting(event) {
   let story = event.target.storyText.value;
   
   
-
+new Story(name, story)
 
   
   userStoriesArr.push(story);
@@ -39,10 +39,12 @@ function submitting(event) {
   userNamesArr.push(story);
 
 
-  Story.allStories.push(userNamesArr);
-  Story.allStories.push(userStoriesArr);
   updateStorage();
   
+
+  
+  // Story.allStories.push(userNamesArr);
+  // Story.allStories.push(userStoriesArr);
   render();
 
 
@@ -70,16 +72,17 @@ function updateStorage() {
 
 let resultsDiv = document.getElementById('results');
 function render() {
+  console.log(Story.allStories);
   for (let i = 0; i <Story.allStories.length; i++) {
 
     let h3 = document.createElement('h3');
     resultsDiv.appendChild(h3);
-    h3.textContent = userNamesArr[i];
+    h3.textContent = Story.allStories[i].userName;
     let paragraph = document.createElement('p');
     resultsDiv.appendChild(paragraph);
-    paragraph.textContent = userStoriesArr[i];
-    userNamesArr=[];
-    userStoriesArr=[];
+    paragraph.textContent = Story.allStories[i].storyText;
+    // userNamesArr=[];
+    // userStoriesArr=[];
 
 
   }
@@ -103,9 +106,9 @@ function getUsersStories() {
   }
 
 }
-
-
 getUsersStories();
+
+render()
 
 
 // let array1 = [1,2,3]
