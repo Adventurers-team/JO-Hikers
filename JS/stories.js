@@ -27,28 +27,13 @@ function submitting(event) {
   let story = event.target.storyText.value;
 
   
-new Story(name, story)
-
-  
-  userStoriesArr.push(story);
-  console.log(Story.allStories);
-
-  userNamesArr.push(name);
-  userNamesArr.push(story);
-
-
-  updateStorage();
+new Story(name,programName, story)
   
 
   
-  // Story.allStories.push(userNamesArr);
-  // Story.allStories.push(userStoriesArr);
+ 
   render();
 
-
-  // console.log(allStories[0]+'hi');
-  // console.log(userNamesArr);
-  // console.log(userStoriesArr);
 
   //creating a new story to save the user's input data
   new Story(name,programName,story)
@@ -56,7 +41,7 @@ new Story(name, story)
   resultsDiv.textContent='';
   // render();
   storiesForm.removeEventListener('submit', submitting);
-  window.location.href= "index.html";
+  // window.location.href= "index.html";
 
 }
 
@@ -69,13 +54,6 @@ new Story("Toleen", "Hello there, hope you are doing well, I was a hiker in Ibn-
 function updateStorage() {
   let storageArr = JSON.stringify(Story.allStories);
   localStorage.setItem('stories', storageArr);
-  
-
-  // let nameArr= JSON.stringify(Story.allStories);
-  // localStorage.setItem('userName', nameArr);
-
-  
-  
 
 }
 
@@ -91,8 +69,6 @@ function render() {
     let paragraph = document.createElement('p');
     resultsDiv.appendChild(paragraph);
     paragraph.textContent = Story.allStories[i].storyText;
-    // userNamesArr=[];
-    // userStoriesArr=[];
 
 
   }
@@ -115,19 +91,4 @@ getUsersStories();
 render()
 
 
-// function render() {
-//   for (let i = 0; i < Story.allStories.length; i++) {
-//     let h3 = document.createElement('h3');
-//     resultsDiv.appendChild(h3);
-//     h3.textContent = Story.allStories[i].userName;
-//     let paragraph = document.createElement('p');
-//     resultsDiv.appendChild(paragraph);
-//     paragraph.textContent = Story.allStories[i].storyText;
 
-//   }
- 
-// }
-
-
-getUsersStories();
-// render();
