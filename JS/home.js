@@ -1,6 +1,4 @@
-
-
-// 'use strict'
+'use strict'
 // let storiesDiv=document.getElementById('storiesDiv');
 
 // //getting the user name and his story from the form in stories page to the home page

@@ -2,18 +2,20 @@
 let storiesForm = document.getElementById('stories');
 let userName = document.getElementById('userName');
 let storyText = document.getElementById('storyText');
-let programName=document.getElementById('programName');
+let programs=document.getElementById('programs');
 let button = document.getElementById('submit');
 let resultsDiv = document.getElementById('results');
+let picture=document.getElementById('picture');
 
 Story.allStories = [];
 
 //creating a constructor function for user's data
 
-function Story(userName,programName, storyText) {
+function Story(userName,programs, storyText,picture) {
   this.userName = userName;
-  this.programName=programName;
+  this.programs=programs;
   this.storyText = storyText;
+  this.picture= picture;
   Story.allStories.push(this);
 }
 
@@ -23,23 +25,16 @@ storiesForm.addEventListener('submit', submitting);
 function submitting(event) {
   event.preventDefault();
   let name = event.target.userName.value;
-  let programName=event.target.programName.value;
+  let programs=event.target.programs.value;
   let story = event.target.storyText.value;
-
+  let picture=event.target.picture.value;
+  console.log(event);
   
-new Story(name,programName, story)
-  
-
-  
- 
-  render();
-
-
   //creating a new story to save the user's input data
-  new Story(name,programName,story)
+  new Story(name,programs,story,picture)
   updateStorage();
   resultsDiv.textContent='';
-  // render();
+  render();
   storiesForm.removeEventListener('submit', submitting);
   // window.location.href= "index.html";
 
@@ -47,34 +42,14 @@ new Story(name,programName, story)
 
 //creating a new story to be shown as a first story
 
-new Story("Toleen", "Hello there, hope you are doing well, I was a hiker in Ibn-Hammad trip, it was amazing trip with the best team ever, I will recommend this trip to my friends^^");
+new Story("Toleen",' ' ,"Hello there, hope you are doing well, I was a hiker in Ibn-Hammad trip, it was amazing trip with the best team ever, I will recommend this trip to my friends^^");
 
 //storing the data in the local storage
 
 function updateStorage() {
   let storageArr = JSON.stringify(Story.allStories);
   localStorage.setItem('stories', storageArr);
-
-}
-
-
-let resultsDiv = document.getElementById('results');
-function render() {
-  console.log(Story.allStories);
-  for (let i = 0; i <Story.allStories.length; i++) {
-
-    let h3 = document.createElement('h3');
-    resultsDiv.appendChild(h3);
-    h3.textContent = Story.allStories[i].userName;
-    let paragraph = document.createElement('p');
-    resultsDiv.appendChild(paragraph);
-    paragraph.textContent = Story.allStories[i].storyText;
-
-
-  }
-
-
-
+  
 }
 
 //getting the user's data from the local storage
@@ -86,9 +61,25 @@ function getUsersStories() {
   }
 }
 
+
+function render() {
+  for (let i = 0; i < Story.allStories.length; i++) {
+    let h3 = document.createElement('h3');
+    resultsDiv.appendChild(h3);
+    h3.textContent = Story.allStories[i].userName;
+    let paragraph = document.createElement('p');
+    resultsDiv.appendChild(paragraph);
+    paragraph.textContent = Story.allStories[i].storyText;
+    let img=document.createElement('a');
+    resultsDiv.appendChild(img);
+    img.textContent=Story.allStories[i].picture;
+
+    console.log(img);
+
+  }
+ 
+}
+
+
 getUsersStories();
-
-render()
-
-
-
+render();
