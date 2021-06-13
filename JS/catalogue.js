@@ -3,8 +3,8 @@
 const cart = new Cart([]);
 
 let pricearray=[];
-// On screen load, we call this method to put all of the busmall options
-// (the things in the Product.allProducts array) into the drop down list.
+let quantityarray=[];
+// let quantity=0;
 function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
@@ -16,25 +16,27 @@ function populateForm() {
  // console.log("hi");
  // let = document.createElement('option');
 
- let quantity = document.createElement("INPUT");
+let quantity = document.createElement("INPUT");
  quantity.setAttribute("type", "number");
  quantity.setAttribute("value", "");
  quantity.setAttribute("id",`in${i}`);
-//  let value=quantity.getAttribute("value");
+// let value=quantity.getAttribute("value");
 
 //  document.write(value);
 //  console.log(value);
- let checkbox = document.createElement("INPUT"); 
- checkbox.setAttribute("type", "checkbox");
- checkbox.setAttribute("id",`ch${i}`);
+let btn = document.createElement("button");
+btn.innerHTML = "Add to Cart";
+btn.setAttribute("type", "button");
+btn.setAttribute("id",`bt${i}`);
 
- selectElement.appendChild(checkbox);
+
+ selectElement.appendChild(btn);
  selectElement.appendChild(quantity);
   
 
-  checkbox.name=Product.allProducts[i].name;
+ btn.name=Product.allProducts[i].name;
    pricearray[i]=Product.allProducts[i].price;
- 
+   quantityarray.push(quantity);
   // checkboxarray.push(checkbox);
   // quantityarray.push(quantity);
   //  console.log(quantity.value+"tr");
@@ -43,45 +45,94 @@ function populateForm() {
   }
 
 }
-let newPrice=[];
-let checkboxarray=[];
-let totalPrice =0;
 
-// let quantityarray=[];
-
-// let checkedbox=[];
-
-
-
-
-// When someone submits the form, we need to add the selected item to the cart
-// object, save the whole thing back to local storage and update the screen
-// so that it shows the # of items in the cart and a quick preview of the cart itself.
 let newquant=[];
+let newPrice=[];
+let totalPrice=0;
 let newPrice1=1;
+
+function renderCode() {
+
+  for(let i=0;i<7;i++){
+    let quantity=document.getElementById(`in${i}`).value;
+console.log(quantity);
+    document.getElementById(`bt${i}`).addEventListener("click", display);
+    
+
+      //  let button =document.getElementById(`bt${i}`).onclick;
+    //  let quantity=document.getElementById(`in${i}`).value;
+      //  let name=document.getElementById(`bt${i}`).name;
+       let name=Product.allProducts[i].name;
+       let price=Product.allProducts[i].price;
+       console.log(name);
+       console.log(quantity);
+       console.log(price);
+
+      //  if(document.getElementById(`bt${i}`).clicked == true){
+        function display() {
+          // document.getElementById("demo").innerHTML = Date();
+       
+        console.log("SARAH");
+
+ newquant.push(quantity);
+
+ console.log(quantity);
+console.log(newquant);
+  newPrice.push(price);
+  
+  newPrice1=newquant[i]*newPrice[i];
+totalPrice=totalPrice+newPrice1;
+if (newquant.length!=0){
+  cart.addItem(name,newquant[i],newPrice1);
+
+} else{
+  document.getElementById(`bt${i}`).disabled = true;
+}
+
+ 
+
+      //  }
+    }
+      //  window.location.href="checkout.html";
+
+  }
+  catalogForm.addEventListener('submit', handleSubmit);}
+
 function handleSubmit(event) {
   
   
-  for(let i=0;i<7;i++){
-       let check =document.getElementById(`ch${i}`).checked;
-       let quantity=document.getElementById(`in${i}`).value;
-       let name=document.getElementById(`ch${i}`).name;
-       let price=Product.allProducts[i].price;
+//   for(let i=0;i<7;i++){
+//     document.getElementById(`bt${i}`).addEventListener("click", display);
 
-       console.log(name);
-       console.log(quantity);
-       if(check){
+//       //  let button =document.getElementById(`bt${i}`).onclick;
+//        let quantity=document.getElementById(`in${i}`).value;
+//       //  let name=document.getElementById(`bt${i}`).name;
+//        let name=Product.allProducts[i].name;
+//        let price=Product.allProducts[i].price;
+//        console.log(name);
+//        console.log(quantity);
+//        console.log(price);
 
- newquant.push(quantity);
-  newPrice.push(price);
-  newPrice1=newquant[i]*newPrice[i];
-totalPrice=totalPrice+newPrice1;
- cart.addItem(name,newquant[i],newPrice1);
-       }
+//       //  if(document.getElementById(`bt${i}`).clicked == true){
+//         function display() {
+//           // document.getElementById("demo").innerHTML = Date();
        
-       window.location.href="checkout.html";
+//         console.log("SARAH");
 
-  }
+//  newquant.push(quantity);
+
+//  console.log(quantity);
+// console.log(newquant);
+//   newPrice.push(price);
+  
+//   newPrice1=newquant[i]*newPrice[i];
+// totalPrice=totalPrice+newPrice1;
+//  cart.addItem(name,newquant[i],newPrice1);
+//       //  }
+//     }
+//       //  window.location.href="checkout.html";
+
+//   }
   
   // TODO: Prevent the page from reloading
   event.preventDefault();
@@ -93,6 +144,132 @@ totalPrice=totalPrice+newPrice1;
   //updateCartPreview();
 
 }
+
+
+// On screen load, we call this method to put all of the busmall options
+// (the things in the Product.allProducts array) into the drop down list.
+
+
+// function populateForm() {
+
+//   //TODO: Add an <option> tag inside the form's select for each product
+//   const selectElement = document.getElementById('allprograms');
+
+//  //let price=0;
+//   for (let i in Product.allProducts) {
+
+//  // console.log("hi");
+//  // let = document.createElement('option');
+
+//  let quantity = document.createElement("INPUT");
+//  quantity.setAttribute("type", "number");
+//  quantity.setAttribute("value", "");
+//  quantity.setAttribute("id",`in${i}`);
+
+ 
+// //  let value=quantity.getAttribute("value");
+
+// //  document.write(value);
+// //  console.log(value);
+
+
+
+// let btn = document.createElement("button");
+// btn.innerHTML = "Add to Cart";
+// btn.setAttribute("type", "button");
+// btn.setAttribute("id",`bt${i}`);
+// // document.body.appendChild(btn);
+
+//  selectElement.appendChild(btn);
+//  selectElement.appendChild(quantity);
+  
+
+//   // checkbox.name=Product.allProducts[i].name;
+
+//    pricearray[i]=Product.allProducts[i].price;
+//   btn.name=Product.allProducts[i].name;
+//   // checkboxarray.push(checkbox);
+//   // quantityarray.push(quantity);
+//   //  console.log(quantity.value+"tr");
+//   // console.log(quantityarray[0]);
+
+//   }
+
+// }
+// let newPrice=[];
+// let checkboxarray=[];
+// let totalPrice =0;
+
+// // let quantityarray=[];
+
+// // let checkedbox=[];
+
+
+
+
+// // When someone submits the form, we need to add the selected item to the cart
+// // object, save the whole thing back to local storage and update the screen
+// // so that it shows the # of items in the cart and a quick preview of the cart itself.
+// let newquant=[];
+// let newPrice1=1;
+
+
+
+  
+
+// function handleSubmit(event) {
+  
+  
+//   for(let i=0;i<7;i++){
+//       //  let check =document.getElementById(`ch${i}`).checked;
+//        let quantity=document.getElementById(`in${i}`).value;
+//        let name=document.getElementById(`bt${i}`).name;
+//        let price=Product.allProducts[i].price;
+
+  
+
+// // let abc = document.getElementById(`bt${i}`).onclick;
+// // console.log(abc);
+// console.log(`bt${i}`);
+//        console.log(name);
+//        console.log(quantity);
+
+//        document.getElementById(`bt${i}`).addEventListener("click", function(event) {
+//         alert(event.target)
+//         console.log("Sarah");
+//         newquant.push(quantity);
+//         newPrice.push(price);
+//         newPrice1=newquant[i]*newPrice[i];
+//       totalPrice=totalPrice+newPrice1;
+//        cart.addItem(name,newquant[i],newPrice1);
+        
+     
+//        })
+
+//       }
+// //        if(document.getElementById(`bt${i}`).onclick ){
+
+// //  newquant.push(quantity);
+// //   newPrice.push(price);
+// //   newPrice1=newquant[i]*newPrice[i];
+// // totalPrice=totalPrice+newPrice1;
+// //  cart.addItem(name,newquant[i],newPrice1);
+// //        }
+       
+//       //  window.location.href="checkout.html";
+
+  
+  
+//   // TODO: Prevent the page from reloading
+//   event.preventDefault();
+  
+//   // Do all the things ...
+//   // addSelectedItemToCart();
+//   cart.saveToLocalStorage();
+//   updateCounter();
+//   //updateCartPreview();
+
+// }
 // let newquantity=[];
 // let newprice=[];
 // let totalPrice=0;
@@ -195,7 +372,8 @@ function updateCounter() {
 const catalogForm = document.getElementById('catalog');
 
 populateForm();
-catalogForm.addEventListener('submit', handleSubmit);
+renderCode();
+// catalogForm.addEventListener('submit', handleSubmit);
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
