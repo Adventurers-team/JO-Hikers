@@ -80,7 +80,7 @@ function updateStorage() {
 }
 
 
-let resultsDiv = document.getElementById('results');
+// let resultsDiv = document.getElementById('results');
 function render() {
   console.log(Story.allStories);
   for (let i = 0; i <Story.allStories.length; i++) {
