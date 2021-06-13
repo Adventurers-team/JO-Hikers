@@ -25,6 +25,31 @@ function submitting(event) {
   let name = event.target.userName.value;
   let programName=event.target.programName.value;
   let story = event.target.storyText.value;
+
+  
+new Story(name, story)
+
+  
+  userStoriesArr.push(story);
+  console.log(Story.allStories);
+
+  userNamesArr.push(name);
+  userNamesArr.push(story);
+
+
+  updateStorage();
+  
+
+  
+  // Story.allStories.push(userNamesArr);
+  // Story.allStories.push(userStoriesArr);
+  render();
+
+
+  // console.log(allStories[0]+'hi');
+  // console.log(userNamesArr);
+  // console.log(userStoriesArr);
+
   //creating a new story to save the user's input data
   new Story(name,programName,story)
   updateStorage();
@@ -32,6 +57,7 @@ function submitting(event) {
   // render();
   storiesForm.removeEventListener('submit', submitting);
   window.location.href= "index.html";
+
 }
 
 //creating a new story to be shown as a first story
@@ -44,6 +70,35 @@ function updateStorage() {
   let storageArr = JSON.stringify(Story.allStories);
   localStorage.setItem('stories', storageArr);
   
+
+  // let nameArr= JSON.stringify(Story.allStories);
+  // localStorage.setItem('userName', nameArr);
+
+  
+  
+
+}
+
+
+let resultsDiv = document.getElementById('results');
+function render() {
+  console.log(Story.allStories);
+  for (let i = 0; i <Story.allStories.length; i++) {
+
+    let h3 = document.createElement('h3');
+    resultsDiv.appendChild(h3);
+    h3.textContent = Story.allStories[i].userName;
+    let paragraph = document.createElement('p');
+    resultsDiv.appendChild(paragraph);
+    paragraph.textContent = Story.allStories[i].storyText;
+    // userNamesArr=[];
+    // userStoriesArr=[];
+
+
+  }
+
+
+
 }
 
 //getting the user's data from the local storage
@@ -54,6 +109,11 @@ function getUsersStories() {
     Story.allStories = storiesData;
   }
 }
+
+getUsersStories();
+
+render()
+
 
 // function render() {
 //   for (let i = 0; i < Story.allStories.length; i++) {
@@ -67,6 +127,7 @@ function getUsersStories() {
 //   }
  
 // }
+
 
 getUsersStories();
 // render();
