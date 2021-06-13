@@ -44,6 +44,7 @@ function showCart() {
   // TODO: Create a TD for the delete link, quantity,  and the item
   // TODO: Add the TR to the TBODY and each of the TD's to the TR
 
+
   for (let i = 0; i < cart.items.length; i++) {
     let tr = document.createElement('tr');
     parent.appendChild(tr);
@@ -66,7 +67,7 @@ function showCart() {
  tr.appendChild(priceTd);
  
    } }
-
+//onsole.log(totalPrice);
 function removeItemFromCart(event) {
     console.log("alert");
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
