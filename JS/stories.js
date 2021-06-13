@@ -19,6 +19,7 @@ function Story(userName,programs, storyText,picture) {
   Story.allStories.push(this);
 }
 
+
 //creating an event listener for the form to handle the submit
 
 storiesForm.addEventListener('submit', submitting);
@@ -28,7 +29,8 @@ function submitting(event) {
   let programs=event.target.programs.value;
   let story = event.target.storyText.value;
   let picture=event.target.picture.value;
-  console.log(event);
+
+  // console.log(event);
   
   //creating a new story to save the user's input data
   new Story(name,programs,story,picture)
@@ -42,7 +44,7 @@ function submitting(event) {
 
 //creating a new story to be shown as a first story
 
-new Story("Toleen",' ' ,"Hello there, hope you are doing well, I was a hiker in Ibn-Hammad trip, it was amazing trip with the best team ever, I will recommend this trip to my friends^^");
+new Story("Toleen",' ' ,"Hello there, hope you are doing well, I was a hiker in Ibn-Hammad trip, it was amazing trip with the best team ever, I will recommend this trip to my friends^^" , '');
 
 //storing the data in the local storage
 
@@ -60,7 +62,7 @@ function getUsersStories() {
     Story.allStories = storiesData;
   }
 }
-
+  // document.getElementById('img').setAttribute( 'src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==' );
 
 function render() {
   for (let i = 0; i < Story.allStories.length; i++) {
@@ -70,11 +72,11 @@ function render() {
     let paragraph = document.createElement('p');
     resultsDiv.appendChild(paragraph);
     paragraph.textContent = Story.allStories[i].storyText;
-    let img=document.createElement('a');
+    let img=document.createElement('img')
     resultsDiv.appendChild(img);
-    img.textContent=Story.allStories[i].picture;
+    img.setAttribute('src' ,Story.allStories[i].picture);
 
-    console.log(img);
+    // console.log(img);
 
   }
  
