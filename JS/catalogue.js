@@ -19,11 +19,14 @@ function populateForm() {
  let quantity = document.createElement("INPUT");
  quantity.setAttribute("type", "number");
  quantity.setAttribute("value", "");
- let value=quantity.getAttribute("value");
- document.write(value);
- console.log(value);
+ quantity.setAttribute("id",`in${i}`);
+//  let value=quantity.getAttribute("value");
+
+//  document.write(value);
+//  console.log(value);
  let checkbox = document.createElement("INPUT"); 
  checkbox.setAttribute("type", "checkbox");
+ checkbox.setAttribute("id",`ch${i}`);
 
  selectElement.appendChild(checkbox);
  selectElement.appendChild(quantity);
@@ -32,20 +35,21 @@ function populateForm() {
   checkbox.name=Product.allProducts[i].name;
    pricearray[i]=Product.allProducts[i].price;
  
-  checkboxarray.push(checkbox);
-  quantityarray.push(quantity);
+  // checkboxarray.push(checkbox);
+  // quantityarray.push(quantity);
   //  console.log(quantity.value+"tr");
   // console.log(quantityarray[0]);
 
   }
 
 }
-
+let newPrice=[];
 let checkboxarray=[];
+let totalPrice =0;
 
-let quantityarray=[];
+// let quantityarray=[];
 
-let checkedbox=[];
+// let checkedbox=[];
 
 
 
@@ -53,57 +57,88 @@ let checkedbox=[];
 // When someone submits the form, we need to add the selected item to the cart
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
+let newquant=[];
+let newPrice1=1;
 function handleSubmit(event) {
+  
+  
+  for(let i=0;i<7;i++){
+       let check =document.getElementById(`ch${i}`).checked;
+       let quantity=document.getElementById(`in${i}`).value;
+       let name=document.getElementById(`ch${i}`).name;
+       let price=Product.allProducts[i].price;
 
+       console.log(name);
+       console.log(quantity);
+       if(check){
+
+ newquant.push(quantity);
+  newPrice.push(price);
+  newPrice1=newquant[i]*newPrice[i];
+totalPrice=totalPrice+newPrice1;
+ cart.addItem(name,newquant[i],newPrice1);
+       }
+       
+       window.location.href="checkout.html";
+
+  }
+  
   // TODO: Prevent the page from reloading
   event.preventDefault();
   
   // Do all the things ...
-  addSelectedItemToCart();
+  // addSelectedItemToCart();
   cart.saveToLocalStorage();
   updateCounter();
   //updateCartPreview();
 
 }
-let newquantity=[];
-let newprice=[];
+// let newquantity=[];
+// let newprice=[];
+// let totalPrice=0;
 // TODO: Add the selected item and quantity to the cart
-function addSelectedItemToCart() {
-  // TODO: suss out the item picked from the select list
-  let quant=0;
+// function addSelectedItemToCart() {
+//   // TODO: suss out the item picked from the select list
+ 
 
-  for (let i = 0; i < checkboxarray.length; i++) {
-    // console.log(i+"first");
+//   for (let i = 0; i < checkboxarray.length; i++) {
+//     // console.log(i+"first");
     
-    if (checkboxarray[i].checked) {
-      // console.log(i+"first");
-     newprice.push(pricearray[i]);
+//     if (checkboxarray[i].checked) {
+//       // console.log(i+"first");
+//      newprice.push(pricearray[i]);
 
-        checkedbox.push(checkboxarray[i]);
-        newquantity.push(quantityarray[i]);
+//         checkedbox.push(checkboxarray[i]);
+//         newquantity.push(quantityarray[i]);
 
-        //  for (let j = 0; j < quantityarray.length; j++) {
-        //  quant=  quantityarray[j];
-        //  console.log(quant+"forresult")
+//         //  for (let j = 0; j < quantityarray.length; j++) {
+//         //  quant=  quantityarray[j];
+//         //  console.log(quant+"forresult")
 
-            // cart.addItem(checkboxarray[i].name,3)
-          // }
+//             // cart.addItem(checkboxarray[i].name,3)
+//           // }
+//                let pricetot=0;
+//                console.log(newprice);
+//           for (let x = 0; x < newprice.length; x++) {
 
-          for (let x = 0; x < checkedbox.length; x++) {
+//             cart.addItem(checkedbox[x].name, newquantity[x],newprice[x]);
 
-            cart.addItem(checkedbox[x].name, newquantity[x],newprice[x]);
-            checkedbox=[];
-            newquantity=[];
-            newprice=[];
-          }
-     
-          // cart.addItem(checkboxarray[i].name,3,newprice[x]);
-        // console.log(quant+"result"); 
-        checkboxarray[i]=false;}
+//             pricetot=pricetot+parseInt(newprice[x]);
+//             console.log(parseInt(pricetot));
         
-    }
+//             checkedbox=[];
+//             newquantity=[];
+//             newprice=[];
+//           }
+        
+//           // cart.addItem(checkboxarray[i].name,3,newprice[x]);
+//         // console.log(quant+"result"); 
+//         checkboxarray[i]=false;}
+        
+//     }
       
-  }
+//   }
+  
 //let selectItem=document.getElementById("items").value;
 //let quant=document.getElementById("quantity").value;
   //console.log(selectItem);
@@ -157,21 +192,10 @@ function updateCounter() {
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
-
-
 const catalogForm = document.getElementById('catalog');
+
+populateForm();
 catalogForm.addEventListener('submit', handleSubmit);
-
-//  let button=document.getElementById('Btn')
-//  button.addEventListener('click', linkpage);
-
-// function linkpage(event) {
-
-
-  
-// }
-
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
-populateForm();
