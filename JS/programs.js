@@ -44,13 +44,13 @@ const Cart = function (items) {
   Product.allProducts = [];
   
   function generateCatalog() {
-    new Product('assets/bag.jpg', 'Wadi Ibn Hammad–Karak','70');
-    new Product('assets/banana.jpg', 'Dibeen Forest–Jerash','70');
-    new Product('assets/bathroom.jpg', 'Inaba Forest–Irbid','70');
-    new Product('assets/boots.jpg', 'Alarayes Lake+Wadi alshallala–Irbid','70');
-    new Product('assets/breakfast.jpg', 'Azraq wetland Reserve-Al-Azraq','60');
-    new Product('assets/bubblegum.jpg', 'Program-6','65');
-    new Product('assets/chair.jpg', 'Program-7','40');
+    new Product('assets/bag.jpg', 'Wadi Ibn Hammad–Karak','20');
+    new Product('assets/banana.jpg', 'Dibeen Forest–Jerash','15');
+    new Product('assets/bathroom.jpg', 'Inaba Forest–Irbid','17');
+    new Product('assets/boots.jpg', 'Alarayes Lake+Wadi alshallala–Irbid','22');
+    new Product('assets/breakfast.jpg', 'Azraq wetland Reserve-Al-Azraq','25');
+    new Product('assets/bubblegum.jpg', 'Wadi Mkheris-Dead sea','65');
+    new Product('assets/chair.jpg', 'Aqaba-Wadi Rum-Petra','40');
     
   }
   // Initialize the app by creating the big list of products with images and names
