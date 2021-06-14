@@ -146,6 +146,7 @@ catalogForm.addEventListener('submit', handleSubmit);
 
 
 
+// let Picarry=[["img/alazraq2.jpg","img/alazraq3.jpg"],["img/dibeen1.jpg","img/dibeen2.jpg"]],;
 function render(){
   for (let i = 0; i < 7; i++) {
 // 1. get the container by id
@@ -153,6 +154,10 @@ function render(){
 // 3. create p and append it to the divElement
 // 4. create imgs and append them tp the divElement
 // 5. create inputs for the quantity and buttons and append them to the divElement 
+
+// divElement.appendChild(Picarry[i])
+pic.src= Product.allProducts[i].filePath;
+
 
     const selectElement = document.getElementById('allprograms');
 

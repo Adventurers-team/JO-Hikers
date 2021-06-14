@@ -44,6 +44,7 @@ const Cart = function (items) {
   };
   Product.allProducts = [];
 
+// let Picarry=[["img/alazraq2.jpg","img/alazraq3.jpg"],["img/dibeen1.jpg","img/dibeen2.jpg"]],;
 
   
   function generateCatalog() {
