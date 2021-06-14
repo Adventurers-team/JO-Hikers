@@ -46,3 +46,33 @@ changeImage(myElement, myImgs);
 console.log(changeImage);
 //////////////////////////////////////////////////////////////////////////////////////
 
+// let reviewsDiv=document.getElementById('reviewsDiv');
+getUserReview();
+render();
+function getUserReview() {
+    let ReviewData = localStorage.getItem('reviews');
+    let parsedData = JSON.parse(ReviewData);
+    
+    if (parsedData !== null) {
+      Review.allReviews = parsedData;
+    }
+    console.log(Review.allReviews);
+  }
+
+  function render() {
+    for (let i = 0; i < Review.allReviews.length; i++) {
+      let h3 = document.createElement('h3');
+      reviewsDiv.appendChild(h3);
+      h3.textContent = Review.allReviews[i].userName;
+      let paragraph = document.createElement('p');
+      reviewsDiv.appendChild(paragraph);
+      paragraph.textContent = Review.allReviews[i].reviewText;
+  
+    }
+   
+  }
+  
+  
+  
+  
+  
