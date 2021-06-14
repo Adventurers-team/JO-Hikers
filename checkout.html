@@ -2,64 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <li><a href="programs.html">Home</a></li>
-        <a href="checkout.html">Cart</a><span id="itemCount"></span>
+  <header>
+    <li><a href="programs.html">Home</a></li>
+    <a href="checkout.html">Cart</a><span id="itemCount"></span>
+    <a href="index.html">Main Page</a>
 
-    </header>
-    <main>
-  
-      <div>
+  </header>
+  <main>
+    <div>
+      <form id="feedback">
+        <fieldset>
+            <legend><h3>Would you like to add a feedback for our services</h3></legend>
+            <label for="userName">Your Name</label>
+            <input type="text" name="userName" id="userName" required pattern="^[a-zA-Z\s]+$"
+            autocomplete="off">
+            <br>
+            <br>
+            <label for="userPhoneNumber">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="7********" pattern="[0-9]{9}" autocomplete="off" required>          
+            <br>
+            <br>
+            <label for="review"> Add Your Review</label> </label>
+            <br>
+            <br>
+            <textarea name="review" id="reviewText" cols="30" rows="10" autocomplete="off"></textarea>
+            <br>
+            <br>
+            <button id="submit">Submit</button>
 
-        <section class="deck col-1">
-          <div class="card">
-            <header>
-              <h1>Your Cart</h1>
-            </header>
-            <div class="copy">
-              <ol>
-                <li>Click the "X" next to any item to remove it from your cart</li>
-              </ol>
-            </div>
+            <div id="reviewsDiv"></div>
+
+
+        </fieldset>
+    </form>
+
+      </form>
+    </div>
+
+    <div>
+
+      <section class="deck col-1">
+        <div class="card">
+          <header>
+            <h1>Your Cart</h1>
+          </header>
+          <div class="copy">
+            <ol>
+              <li>Click the "X" next to any item to remove it from your cart</li>
+            </ol>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <section class="deck col-1">
+        <div id="cart-container" class="card">
+          <table id="cart">
+            <thead>
+              <tr>
+                <th>Remove</th>
+                <th>Quantity</th>
+                <th>Programs</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+          </table>
+        </div>
+        <br>
+        <h3>Total Price: <h4 id="total"></h4>
+        </h3>
+
+      </section>
+
+
+    </div>
+  </main>
+  <footer>
+    <p>&copy;2021 ASAC 201d16</p>
+  </footer>
+  <script src="Js/programs.js"></script>
+  <script src="JS/cart.js"></script>
+  <script src="JS/review.js"></script>
   
-        <section class="deck col-1">
-          <div id="cart-container" class="card">
-            <table id="cart">
-              <thead>
-                <tr>
-                  <th>Remove</th>
-                  <th>Quantity</th>
-                  <th>Programs</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-              <tfoot></tfoot>
-            </table>
-          </div>
-<br> <h3>Total Price: <h4 id="total"></h4> </h3>
-
-        </section>
 
 
-      </div>
-    </main>
-    <footer>
-      <p>&copy;2021 ASAC 201d16</p>
-    </footer>
-    <script src="Js/programs.js"></script>
-    <script src="JS/cart.js"></script>
-    
-    
+
 
 </body>
 

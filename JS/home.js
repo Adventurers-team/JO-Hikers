@@ -27,4 +27,52 @@
 
 // getUsersStories();
 // render();
+// gt the reviews from the local storage
 
+
+  
+let myElement = document.getElementById('myImg'),
+myImgs =['img/wadirum.jpg','img/wadirum2.jpg','img/wadirum3.jpg','img/alarayslake1.jpg','img/alarayslake2.jpg','img/alarayslake3.jpg'
+];
+
+function changeImage(myElement, myImgs){
+
+    setInterval(function(){
+        let myRandomNum =Math.floor(Math.random()*myImgs.length);
+        myElement.src =myImgs[myRandomNum];
+    }, 1500)
+}
+changeImage(myElement, myImgs);
+console.log(changeImage);
+//////////////////////////////////////////////////////////////////////////////////////
+
+// let reviewsDiv=document.getElementById('reviewsDiv');
+getUserReview();
+render();
+function getUserReview() {
+    let ReviewData = localStorage.getItem('reviews');
+    let parsedData = JSON.parse(ReviewData);
+    
+    if (parsedData !== null) {
+      Review.allReviews = parsedData;
+    }
+    console.log(Review.allReviews);
+  }
+
+  function render() {
+    for (let i = 0; i < Review.allReviews.length; i++) {
+      let h3 = document.createElement('h3');
+      reviewsDiv.appendChild(h3);
+      h3.textContent = Review.allReviews[i].userName;
+      let paragraph = document.createElement('p');
+      reviewsDiv.appendChild(paragraph);
+      paragraph.textContent = Review.allReviews[i].reviewText;
+  
+    }
+   
+  }
+  
+  
+  
+  
+  
