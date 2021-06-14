@@ -27,6 +27,24 @@
 
 // getUsersStories();
 // render();
+// gt the reviews from the local storage
+
+
+  
+let myElement = document.getElementById('myImg'),
+myImgs =['img/wadirum.jpg','img/wadirum2.jpg','img/wadirum3.jpg','img/alarayslake1.jpg','img/alarayslake2.jpg','img/alarayslake3.jpg'
+];
+
+function changeImage(myElement, myImgs){
+
+    setInterval(function(){
+        let myRandomNum =Math.floor(Math.random()*myImgs.length);
+        myElement.src =myImgs[myRandomNum];
+    }, 1500)
+}
+changeImage(myElement, myImgs);
+console.log(changeImage);
+//////////////////////////////////////////////////////////////////////////////////////
 
 // let reviewsDiv=document.getElementById('reviewsDiv');
 
