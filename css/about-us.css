@@ -1,10 +1,46 @@
-*{
+/* *{
     box-sizing: border-box;
-}
+} */
+body{    background-color: rgb(191 211 228); 
 
-header{
+    background-size: cover;
+ 
+    min-height: 100vh; 
+ 
+     z-index: 1;   
+       height:1000px; 
+ }
+ 
+ header{width: 100%px;
+   
+   height: 50px;
+   margin-top: 5px;
+   padding: 15px;
+   background-color:  rgb(104 152 145);
+   z-index: 2;
+   
+   position: relative;}
+ header .logo img{    width: 5%;          position: absolute;     margin-left: 20px;} header .project-name{    font-size: 40px;    color: #00335F;    text-align: center;    letter-spacing: 20px;    font-family: 'Lobster', cursive;;    /* margin-right: 40%; */}
+ 
+ .nav{ background-color: #75a59e	;
+ height: 3% ;
+ width: 100%;
+ position: -webkit-sticky;
+   position: sticky;
+   top: 0px;
+ }
+ header .project-name:hover{    color: rgb(12, 12, 12);}
+ nav{    width: 100%;}
+ nav .links{    list-style: none;    width: 100%;    text-align: center;
+ }
+
+ a {    text-decoration:none;    color: 201414;    transition: 0.3s;    }a:hover {    color: rgb(24, 212, 181);}
+ 
+ nav .links li{    display: inline-block;    padding: 5px;        }
+
+/* header{
     background-color:#126e82;
-    height: 100px;
+    height: 100%;
 
 }
 
@@ -12,7 +48,7 @@ body{
     height: 75%;
     width: 100%;
 
-}
+} */
 
 main {
     background-color: #d8e3e7;
@@ -65,12 +101,12 @@ footer {
 
 } */
 
-.rawan{
+/* .rawan{
     /* display: inline-block; */
     /* float: left; */
 
     /* margin-left: 7%; */
-}
+
 
 
 /* 
