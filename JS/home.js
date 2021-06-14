@@ -29,8 +29,28 @@
 // render();
 
 // let reviewsDiv=document.getElementById('reviewsDiv');
-getUserReview();
-render();
+
+feedbackForm.addEventListener('submit', submitReview)
+function submitReview(event) {
+  event.preventDefault();
+  let name = event.target.userName.value;
+  console.log(name);
+  let phoneNumber=event.target.phone.value;
+  console.log(phoneNumber);
+
+  let review = event.target.reviewText.value;
+  console.log(review);
+
+  new Review(name,phoneNumber,review)
+  updateReviewStorage();
+  reviewsDiv.textContent='';
+  render();
+  feedbackForm.removeEventListener('submit', submitReview);
+  tableBody.textContent='';
+  
+  // window.location.href= "index.html";
+}
+
 function getUserReview() {
     let ReviewData = localStorage.getItem('reviews');
     let parsedData = JSON.parse(ReviewData);
@@ -54,7 +74,8 @@ function getUserReview() {
    
   }
   
-  
+  getUserReview();
+  render();
   
   
   
