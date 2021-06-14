@@ -29,8 +29,7 @@
 // render();
 
 // let reviewsDiv=document.getElementById('reviewsDiv');
-getUserReview();
-render();
+
 function getUserReview() {
     let ReviewData = localStorage.getItem('reviews');
     let parsedData = JSON.parse(ReviewData);
@@ -55,6 +54,7 @@ function getUserReview() {
   }
   
   
-  
+  getUserReview();
+render();
   
   
