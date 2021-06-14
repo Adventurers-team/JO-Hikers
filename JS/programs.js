@@ -32,27 +32,36 @@ const Cart = function (items) {
         this.price=price;
 
   };
-  
+  // let picc= [];
+
   // Product contructor.
-  const Product = function (filePath,name,price) {
-    this.filePath = filePath;
+  const Product = function (filePath,name,price,paragraph) {
+    this.filePath = filePath; //array
     this.name = name;
     this.price=price;
-
+    this.paragraph=paragraph;
     Product.allProducts.push(this);
   };
   Product.allProducts = [];
+
+
   
   function generateCatalog() {
-    new Product('assets/bag.jpg', 'Wadi Ibn Hammad–Karak','20');
-    new Product('assets/banana.jpg', 'Dibeen Forest–Jerash','15');
-    new Product('assets/bathroom.jpg', 'Inaba Forest–Irbid','17');
-    new Product('assets/boots.jpg', 'Alarayes Lake+Wadi alshallala–Irbid','22');
-    new Product('assets/breakfast.jpg', 'Azraq wetland Reserve-Al-Azraq','25');
-    new Product('assets/bubblegum.jpg', 'Wadi Mkheris-Dead sea','65');
-    new Product('assets/chair.jpg', 'Aqaba-Wadi Rum-Petra','40');
+    new Product('img/ibnhammad1.jpg', 'Wadi Ibn Hammad–Karak 18km','20','If you are a beginner and want to join us for a short trip this program will fit you. We will start from 7:00 am and arrive to al-Karak at 10:00. Then we will join a group of hikers to hike in Wadi Ibn Hammad torrent, and then return back to Amman at 11:00 pm.');
+    new Product('img/dibeen1.jpg', 'Dibeen Forest–Jerash','15','Here you can see The beautiful Nature of our  Jordan on( three days camping Program) that starts on 25-July – 2021. we will visit  the forest for hiking & camping in the forest. In the next day we will Visit Dibeen Forest reserve and Camping inside it. In the last day we will Take a tour in Jerash & return back to amman.');
+    new Product('img/inaba.jpg', 'Inaba Forest–Irbid','17','Here you can see The beautiful Nature of our  Jordan on( three days camping Program) that starts on 30-July – 2021. on the first day Visit Inaba forest and hike there for 20 km, Camp in the forest for two days and Take a tour in Irbid then return back to Amman.');
+    new Product('img/alarayslake1.jpg', 'Alarayes Lake+Wadi alshallala–Irbid','22', 'Here you can see The beautiful Nature of Jordan on( three days camping Program) that starts on 15-July – 2021. On the first day Visit the lake & hike for 18 km, Camp near the lake for two days and Take a tour in Irbid, visit Wadi AlShallala then return back to Amman.');
+    new Product('img/alazraq1.jpg', 'Azraq wetland Reserve-Al-Azraq','25', 'it is a 1 day program, we will  Travel by bus to Al-Azraq on 12/7/2021 to visit Azraq wetland Reserve and hike there and return back to Amman at11:00');
+    new Product('img/mkheris.jpeg', 'Wadi Mkheris-Dead sea','65', 'On 18- July – 2021 we will  Arrive at Wadi mkheris and Camp there, on day two we will Visit Dead sea Camping there. Arrive at Main Hot Springs and Return back to Amman.');
+    new Product('img/wadirum.jpg', 'Aqaba-Wadi Rum-Petra','40','On the first day we arrived at Wadi Rum and Camp in the middle of the desert, on the next day we will visit Petra and  Camp there, on the last day we will arrive to Aqaba and then Return back to Amman.');
     
   }
+
+  // render function
+  // for loop through the filePath =>>>
+  // 1. create image element 
+  //2. source= this.filePath[i]
+
   // Initialize the app by creating the big list of products with images and names
   generateCatalog();
 
