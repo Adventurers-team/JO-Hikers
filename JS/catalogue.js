@@ -50,7 +50,7 @@ function populateForm() {
 // }
 // //console.log(quantityarray);
 // let newquant = [];
-// let newPrice = [];
+let newPrice = [];
 let totalPrice = 0;
 let newPrice1 = 1;
 
@@ -86,8 +86,13 @@ function renderCode() {
       console.log(quantity);
       // console.log(newquant);
       // newPrice.push(price);
+      // newPrice.push(price);
       newPrice1=price * quantity;
       totalPrice=totalPrice+newPrice1;
+
+     localStorage.setItem('total',JSON.stringify(totalPrice));
+
+
       // if (newquant.length!=0){
       // } else{
       // document.getElementById(`bt${i}`).disabled = true;

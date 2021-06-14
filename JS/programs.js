@@ -66,3 +66,7 @@ const Cart = function (items) {
   generateCatalog();
 
   
+  let storageTotal = document.getElementById('total');
+  let totalData = JSON.parse(localStorage.getItem('total'));
+  console.log(totalData);
+  storageTotal.textContent = totalData;
