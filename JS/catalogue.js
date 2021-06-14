@@ -98,8 +98,21 @@ function renderCode() {
       // document.getElementById(`bt${i}`).disabled = true;
       // }
       cart.addItem(name,quantity,newPrice1);
+
+      // //*********************** */
+      // const submitPersonalInfoNotif = window.createNotification({});
+      // window.createNotification({    // close on click    closeOnClick: true,
+      //   // displays close button    displayCloseButton: false,
+      //   // nfc-top-left    // nfc-bottom-right    // nfc-bottom-left    positionClass: 'nfc-top-right',
+      //   // callback    onclick: false,
+      //   // timeout in milliseconds    showDuration: 3500,
+      //   // success, info, warning, error, and none    theme: 'success'
+      // })({    title: "Submitted",    message: "The order will be delivered in 1 Day \n \n Thank You"  });
+      //******************** */
+      
       cart.saveToLocalStorage();
       document.getElementById(myId).removeEventListener("click",display)
+     
       //  }
       }
       function handleSubmit(event) {
