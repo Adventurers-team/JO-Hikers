@@ -70,7 +70,7 @@ function showCart() {
   }
 }
 //onsole.log(totalPrice);
-let total = document.getElementById('total').textContent;
+let total = document.getElementById('total');
 console.log(total + 'Hiiiiiiiii');
 
 
@@ -83,9 +83,9 @@ function removeItemFromCart(event) {
     cart.removeItem(event.target.id);
     console.log(event.target.title);
 
-    let total=Number(localStorage.getItem('total'))-Number(event.target.title);
-    localStorage.setItem('total',total);
-    
+    let totalPrice=Number(localStorage.getItem('total'))-Number(event.target.title);
+    localStorage.setItem('total',totalPrice);
+    total.textContent=totalPrice;
     console.log(total);
 
   }
