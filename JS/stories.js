@@ -7,6 +7,8 @@ let button = document.getElementById('submit');
 let resultsDiv = document.getElementById('results');
 let picture=document.getElementById('picture');
 
+
+
 Story.allStories = [];
 
 //creating a constructor function for user's data
@@ -66,22 +68,27 @@ function getUsersStories() {
 
 function render() {
   for (let i = 0; i < Story.allStories.length; i++) {
+    let newDiv=document.createElement('div');
+    newDiv.setAttribute("id", `div${i}`);
+    resultsDiv.appendChild(newDiv);
     let h3 = document.createElement('h3');
-    resultsDiv.appendChild(h3);
+    h3.setAttribute("id", `h${i}`);
+    newDiv.appendChild(h3);
+    // resultsDiv.appendChild(h3);
     h3.textContent = Story.allStories[i].userName;
     let paragraph = document.createElement('p');
-    resultsDiv.appendChild(paragraph);
+    paragraph.setAttribute("id", `para${i}`)
+    newDiv.appendChild(paragraph);
+    // resultsDiv.appendChild(paragraph);
     paragraph.textContent = Story.allStories[i].storyText;
-    let img=document.createElement('img')
-    resultsDiv.appendChild(img);
+    let img=document.createElement('img');
+    img.setAttribute("id", `pic${i}`);
+    newDiv.appendChild(img);
+    // resultsDiv.appendChild(img);
     img.setAttribute('src' ,Story.allStories[i].picture);
-
-    // console.log(img);
-
   }
  
 }
-
 
 getUsersStories();
 render();

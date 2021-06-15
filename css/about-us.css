@@ -1,6 +1,14 @@
+<<<<<<< HEAD
+/* *{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+} 
+=======
 *{
   box-sizing: border-box;
 }
+>>>>>>> 2b54e87d7fb09b79aa2f36ca9d4d5b7116715aaf
 body{
 
   background-color:  whitesmoke;
@@ -117,6 +125,9 @@ header img{
     content: "";
     clear: both;
     display: table;
+<<<<<<< HEAD
+  }
+=======
   }  */
 .H {
 margin-top: 3%;
@@ -203,3 +214,4 @@ margin-top: 3%;
   text-align: justify;
   margin-left:5% ;
 }
+>>>>>>> 2b54e87d7fb09b79aa2f36ca9d4d5b7116715aaf
