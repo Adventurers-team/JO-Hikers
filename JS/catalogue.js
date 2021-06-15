@@ -169,7 +169,7 @@ function render(){
 // 5. create inputs for the quantity and buttons and append them to the divElement 
 
 // divElement.appendChild(Picarry[i])
-pic.src= Product.allProducts[i].filePath;
+// pic.src= Product.allProducts[i].filePath;
 
 
     const selectElement = document.getElementById('allprograms');
@@ -188,11 +188,11 @@ pic.src= Product.allProducts[i].filePath;
     console.log(title);
 
     
-    let pic= document.createElement('img');
+    // let pic= document.createElement('img');
 
-    divElement.appendChild(pic);
-    pic.src= Product.allProducts[i].filePath;
-    console.log(pic);
+    // divElement.appendChild(pic);
+    // pic.src= Product.allProducts[i].filePath;
+    // console.log(pic);
 
     let para= document.createElement('p')
     divElement.appendChild(para);
@@ -208,7 +208,7 @@ pic.src= Product.allProducts[i].filePath;
     quantity.setAttribute("type", "number");
 
     quantity.setAttribute("id", `in${i}`);
-    quantity.setAttribute("value", "");
+    quantity.setAttribute("value", "1");
 
     // let value=quantity.getAttribute("value");
 
