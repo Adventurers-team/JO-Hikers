@@ -98,8 +98,21 @@ function renderCode() {
       // document.getElementById(`bt${i}`).disabled = true;
       // }
       cart.addItem(name,quantity,newPrice1);
+
+      // //*********************** */
+      // const submitPersonalInfoNotif = window.createNotification({});
+      // window.createNotification({    // close on click    closeOnClick: true,
+      //   // displays close button    displayCloseButton: false,
+      //   // nfc-top-left    // nfc-bottom-right    // nfc-bottom-left    positionClass: 'nfc-top-right',
+      //   // callback    onclick: false,
+      //   // timeout in milliseconds    showDuration: 3500,
+      //   // success, info, warning, error, and none    theme: 'success'
+      // })({    title: "Submitted",    message: "The order will be delivered in 1 Day \n \n Thank You"  });
+      //******************** */
+      
       cart.saveToLocalStorage();
       document.getElementById(myId).removeEventListener("click",display)
+     
       //  }
       }
       function handleSubmit(event) {
@@ -156,8 +169,7 @@ function render(){
 // 5. create inputs for the quantity and buttons and append them to the divElement 
 
 // divElement.appendChild(Picarry[i])
-
-pic.src= Product.allProducts[i].filePath;
+// pic.src= Product.allProducts[i].filePath;
 
 
     const selectElement = document.getElementById('allprograms');
@@ -196,7 +208,7 @@ pic.src= Product.allProducts[i].filePath;
     quantity.setAttribute("type", "number");
 
     quantity.setAttribute("id", `in${i}`);
-    quantity.setAttribute("value", "");
+    quantity.setAttribute("value", "1");
 
     // let value=quantity.getAttribute("value");
 
