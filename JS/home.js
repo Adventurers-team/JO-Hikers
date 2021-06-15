@@ -44,6 +44,8 @@ function changeImage(myElement, myImgs){
 }
 changeImage(myElement, myImgs);
 console.log(changeImage);
+
+
 //////////////////////////////////////////////////////////////////////////////////////
 
 // let reviewsDiv=document.getElementById('reviewsDiv');
@@ -75,4 +77,7 @@ function getUserReview() {
   getUserReview();
 render();
   
-  
+/////////////////////////////////////////////////////////////////////////////////
+function pageRedirect() {
+  window.location.href = "programs.html";
+} 
