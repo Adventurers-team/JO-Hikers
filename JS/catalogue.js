@@ -187,16 +187,17 @@ function render(){
     title.textContent=Product.allProducts[i].name;
     console.log(title);
 
-    
-    // let pic= document.createElement('img');
-
-    // divElement.appendChild(pic);
-    // pic.src= Product.allProducts[i].filePath;
-    // console.log(pic);
-
     let para= document.createElement('p')
     divElement.appendChild(para);
     para.textContent=Product.allProducts[i].paragraph;
+    
+    let pic= document.createElement('img');
+
+    divElement.appendChild(pic);
+    pic.src= Product.allProducts[i].filePath;
+    console.log(pic);
+
+    
 
     let price1=document.createElement('number');
     divElement.appendChild(price1)

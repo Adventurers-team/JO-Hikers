@@ -31,19 +31,34 @@
 
 
   
-let myElement = document.getElementById('myImg'),
-myImgs =['img/wadirum.jpg','img/wadirum2.jpg','img/wadirum3.jpg','img/alarayslake1.jpg','img/alarayslake2.jpg','img/alarayslake3.jpg'
-];
+// let myElement = document.getElementById('myImg'),
 
-function changeImage(myElement, myImgs){
+// myImgs =['img/wadirum.jpg','img/inaba3.jpg','img/wadirum3.jpg','img/alazraq3.jpg','img/alazraq1.jpg','img/dibeen1.jpg','img/ibnhammad3.jpg','img/inaba2.jpg'
+// ];
 
-    setInterval(function(){
-        let myRandomNum =Math.floor(Math.random()*myImgs.length);
-        myElement.src =myImgs[myRandomNum];
-    }, 1500)
-}
-changeImage(myElement, myImgs);
-console.log(changeImage);
+// function changeImage(myElement, myImgs){
+
+//     setInterval(function(){
+//         let myRandomNum =Math.floor(Math.random()*myImgs.length);
+//         myElement.src =myImgs[myRandomNum];
+//     }, 3000)
+// }
+// changeImage(myElement, myImgs);
+// console.log(changeImage);
+// let myImgs =['img/wadirum.jpg','img/wadirum2.jpg','img/wadirum3.jpg','img/alarayslake1.jpg','img/alarayslake2.jpg','img/alarayslake3.jpg'
+// ];
+// let main= document.getElementById('main');
+// console.log(main)
+// // background-image: url();
+// let myRandomNum =Math.floor(Math.random()*myImgs .length);
+// main.style.background=`url('${myImgs[myRandomNum]}')  no-repeat`
+// // let myElement = document.querySelectorAll('.myImg');
+
+// setInterval(()  => {
+
+//   myElement.style.backgroundImage='url ("img/' + myImgs[myRandomNum]+');
+
+// },1000);
 
 
 //////////////////////////////////////////////////////////////////////////////////////
