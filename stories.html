@@ -6,87 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/stories.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Acme&family=Architects+Daughter&family=Fredoka+One&family=Kaushan+Script&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
     <title>Stories-Page</title>
 </head>
 <body>
     <header>
-        <div class="logo"><img src="" alt=""> </div>
+        <img src="img/logo.png" alt="">
         <h1 class="project-name">
-            JoHikers
+            JO HIKERS
         </h1>
         
-
-    </header>
-    <main>
-        <div class="nav">
-            <nav>
-               <ul class="links">
-                    <li><a href="index.html">Home</a></li>
-                   <li><a href="gallery.html">Gallery</a></li>
-                   <li><a href="programs.html"> Programs </a></li>
-                   <li><a href="checkout.html">Checkout </a></li>
-                   <li><a href="stories.html">Stories </a></li>
-                   <li><a href="about-us.html"></a>About US</li>
-                   
-               </ul>
-            </nav>
-        </div>
+        
+        </header>
+        
+            <main>
+                <div class="nav">
+                    <nav>
+                       <ul class="links">
+                            <li><a href="index.html">Home</a></li>
+                           <li><a href="gallery.html">Gallery</a></li>
+                           <li><a href="programs.html"> Programs </a></li>
+                           <li><a href="checkout.html">Checkout </a></li>
+                           <li><a href="stories.html">Stories </a></li>
+                           <li> <a href="about-us.html"> About us</a></li>
+                           
+                       </ul>
+                    </nav>
+                </div> 
         <div>
+            <h3 id="paragraph">If you have a previous experience with our team you can share it on our site...</h3>
             <form id="stories">
                 <fieldset>
-                    <legend><h3 id="paragraph">If you have a previous experience with our team you can share it on our site</h3></legend>
+                <br>
                     <label class="userName"for="userName">Your Name</label>
-                    <input  type="text" name="userName" id="userName">
+                    
+                    <input  type="text" name="userName" id="userName" autocomplete="off">
                     <br>
                     <br>
-                    <label for="programName">Program</label>
+                    <label for="programName" class="programField" >Program</label>
+                    
                     <select name="programs" id="programs">
-                        <option value="Wadi Ibn Hammad–Karak">Wadi Ibn Hammad–Karak</option>
-                        <option value="Dibeen Forest–Jerash">Dibeen Forest–Jerash</option>
-                        <option value="Inaba Forest–Irbid">Inaba Forest–Irbid</option>
-                        <option value="Alarayes Lake+Wadi alshallala–Irbid">Alarayes Lake+Wadi alshallala–Irbid</option>
-                        <option value="Azraq wetland Reserve-Al-Azraq">Azraq wetland Reserve-Al-Azraq</option>
-                        <option value="Wadi Mkheris-Dead sea">Wadi Mkheris-Dead sea</option>
-                        <option value="Aqaba-Wadi Rum-Petra">Aqaba-Wadi Rum-Petra</option>
+                        <option value="Wadi Ibn Hammad–Karak" class="p">Wadi Ibn Hammad–Karak</option>
+                        <option value="Dibeen Forest–Jerash" class="p">Dibeen Forest–Jerash</option>
+                        <option value="Inaba Forest–Irbid" class="p">Inaba Forest–Irbid</option>
+                        <option value="Alarayes Lake+Wadi alshallala–Irbid" class="p">Alarayes Lake+Wadi alshallala–Irbid</option>
+                        <option value="Azraq wetland Reserve-Al-Azraq" class="p">Azraq wetland Reserve-Al-Azraq</option>
+                        <option value="Wadi Mkheris-Dead sea" class="p">Wadi Mkheris-Dead sea</option>
+                        <option value="Aqaba-Wadi Rum-Petra" class="p">Aqaba-Wadi Rum-Petra</option>
                     </select>
                   
                     <br>
                     <br>
-                    <label for="story">Tell your Story</label>
-                    <br>
-                    <br>
+                    <label for="story" class="storyField">Tell your Story</label>
+                    
                     <textarea name="story" id="storyText" cols="30" rows="10"></textarea>
                     <br>
-                    <label for="picture">Add Your Picture URL</label>
-                    <input type="text" id="picture" name="picture">
                     <br>
+                    <label for="picture" class="urlField">Your Picture URL</label>
+                   
+                    <input type="text" id="picture" name="picture" autocomplete="off">
+                    <br>
+                    <br>
+                    
                     <button id="submit">Add your Story</button>
     
     
                 </fieldset>
             </form>
+            <hr>
+            <h3 id="str">STORIES</h3>
             <div id="results">
     
             </div>
           </div>
-
+        
     </main>
     <footer>
-        <p id="fotterp">
+        <span id="fotterp"> 
             Contact us
-        </p>
+        </span>
            
-            <div class="fotterImg"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgvRWnaCHb6by8oA_iz9Z6QsXCiK56EtnCBw&usqp=CAU" alt="">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg8XwZewwFaDf6oJBNufF2Zl30TExP8FA1kA&usqp=CAU" alt="">
-                <img src="http://pngimg.com/uploads/youtube/youtube_PNG9.png" alt=""></div>
-            &copy; copy right 2021
+            <div class="fotterImg">
+                <img src="img/facebook.png" alt="" height="20px" width="20px">
+                <img src="img/twitter.png" alt="" height="20px" width="20px">
+                <img src="img/whatssapp.png" alt="" height="20px" width="20px">
+                <img src="img/linkedin.png" alt="" height="20px" width="20px">
+                
+              
 
-
-            
+             
+            </div>
+            <p id="footerpara">&copy; copy right 2021</p>
+            <p id="footerLocation">Location</p>
+            <p id="address">Amman-Jordan/Mecca St.</p>
 
     </footer>
     
+    <script src="JS/stories.js"></script>
 </body>
-<script src="JS/stories.js"></script>
 
 </html>
