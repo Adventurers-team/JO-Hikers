@@ -188,11 +188,11 @@ function render(){
     console.log(title);
 
     
-    let pic= document.createElement('img');
+    // let pic= document.createElement('img');
 
-    divElement.appendChild(pic);
-    pic.src= Product.allProducts[i].filePath;
-    console.log(pic);
+    // divElement.appendChild(pic);
+    // pic.src= Product.allProducts[i].filePath;
+    // console.log(pic);
 
     let para= document.createElement('p')
     divElement.appendChild(para);
