@@ -51,6 +51,7 @@ function showCart() {
 
 
     let deleteTd = document.createElement('td');
+    deleteTd.setAttribute("id",`del${i}`)
     deleteTd.textContent = 'X';
     tr.appendChild(deleteTd);
      deleteTd.setAttribute("title",cart.items[i].price)
