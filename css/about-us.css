@@ -1,92 +1,88 @@
 *{
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-} 
-body{
-    background-color: rgb(191 211 228);
-    background-size: cover;
-    min-height: 100vh;
-    z-index: 1;
-    /* height: 50px; */
-
+  box-sizing: border-box;
 }
-/*for all pages star*/
+body{
 
+  background-color:  whitesmoke;
+}
+header img{
+  width: 7%;
+  height: 7%;
+  position: relative;
+  top: 30px;
+  left: 30px
+  }
   header{
     width: 100%;
-    height: 0%;
-     margin-top:0.5%;
-    padding: 1%; 
-    background-color:  rgb(104 152 145);
+    height: 10%;
+     margin-top:0%;
+    padding: 0%; 
+    background-color:  whitesmoke;
     z-index: 2;
     position: relative;
   } 
-  
       header .project-name{ 
+      position: relative;
+      bottom: 40px;
       font-size: 400%; 
-      color: #00335F;
+      color: #02475E;
       text-align: center; 
       letter-spacing: 30px; 
-      font-family: 'Lobster', cursive;
-      /* margin-right: 40%; */
+      font-family: 'Righteous', cursive;
+      /* font-weight: bold; */
+            /* margin-right: 40%; */
     }
   .nav{
-  background-color: #75A59E ;
-  height: 3% ;
-  width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  }
-  header .project-name:hover{
-  color: rgb(12, 12, 12);
-  }
-nav{    width: 100%;
-  }
-nav .links{
-  list-style: none;
-  width: 100%;
-  text-align: center;
-
-  }
-  a { 
-   text-decoration:none;
-    color: #dbeeff;
-     transition: 0.3s;
-    }
-    a:hover {
-      color: rgb(24, 212, 181);
+      background-color:  #02475E;
+      height: 3% ;
+      width: 100%;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0px;
+      /* font-weight: bold; */
+      font-size: large;
+      font-family: fantasy;
       }
-    nav .links li{
-      display: inline-block;
-      padding: 1%; 
-                                 
-    }
-
-
-
-
-
-    footer{
-        width: 100%;
-        height: 0%;
-         margin-top:0.5%;
-        padding: 1%; 
-        background-color:  rgb(104 152 145);
-       
-        /* position: absolute; */
-      } 
-      
-      footer .fotterImg{
-        width: 30%;
-        /* padding: 10%; */
+      header .project-name:hover{
+      color:#9FB8AD;
       }
-      
-footer img {
-    height: 5%;
-    width: 5% ;
-   }
+    nav{    width: 100%;
+      }
+    nav .links{
+      list-style: none;
+      width: 100%;
+      text-align: center;
+      }
+      a { 
+       text-decoration:none;
+        color:whitesmoke;
+         transition: 0.3s;
+        }
+        a:hover {
+          color: #FB743E;
+          }
+        nav .links li{
+          display: inline-block;
+          padding: 1%; 
+        }
+
+
+        footer{
+          width: 100%;
+          height: 0%;
+           margin-top:0.5%;
+          padding: 1%; 
+            background-color:  #02475E;
+          /* position: absolute; */
+        } 
+        footer .fotterImg{
+          width: 30%;
+          /* padding: 10%; */
+        }
+        #footerpara{
+          text-align: center;
+        }
+/* 
    .pic1 {
     float: left;
     width: 33.33%;
@@ -94,7 +90,7 @@ footer img {
   }
   
   /* Clearfix (clear floats) */
-  .row::after {
+  /* .row::after {
     content: "";
     clear: both;
     display: table;
@@ -116,9 +112,94 @@ footer img {
 
     margin-left: 20%;
   }
-  /* Clearfix (clear floats) */
+   Clearfix (clear floats) 
   .row2::after {
     content: "";
     clear: both;
     display: table;
-  }
+  }  */
+.H {
+margin-top: 3%;
+  font-size: 60px;
+
+  text-align: center;
+
+
+}
+
+.our-picture{
+
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 80px;
+
+}
+.row1{
+  flex-basis: 240px;
+}
+
+.row1 .profile-img{
+
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.row1:hover .profile-img {
+  filter: grayscale(0);
+}
+
+.name {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+
+.row1 p {
+  font-size: 15px;
+  margin-top: 20px;
+  text-align: justify;
+  margin-left:5% ;
+}
+
+.our-picture1{
+
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 80px;
+
+}
+.row2{
+  flex-basis: 200px;
+}
+
+.row2 .profile-img1{
+
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.row2:hover .profile-img1 {
+  filter: grayscale(0);
+}
+
+.name1 {
+  margin-top: 30px;
+  font-size: 30px;
+  margin-left: 18%;
+}
+
+
+.row2 p {
+  font-size: 15px;
+  margin-top: 20px;
+  text-align: justify;
+  margin-left:5% ;
+}
