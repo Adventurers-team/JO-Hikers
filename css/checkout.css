@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+  }
+  header img{
+    width: 7%;
+    height: 7%;
+    position: relative;
+    top: 30px;
+    left: 30px
+    }
+    header{
+      width: 100%;
+      height: 10%;
+       margin-top:0%;
+      padding: 0%; 
+      background-color:  whitesmoke;
+      z-index: 2;
+      position: relative;
+    } 
+        header .project-name{ 
+        position: relative;
+        bottom: 40px;
+        font-size: 400%; 
+        color: #02475E;
+        text-align: center; 
+        letter-spacing: 30px; 
+        font-family: 'Righteous', cursive;
+        /* font-weight: bold; */
+              /* margin-right: 40%; */
+      }
+    .nav{
+        background-color:  #02475E;
+        height: 3% ;
+        width: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        /* font-weight: bold; */
+        font-size: large;
+        font-family: fantasy;
+        }
+        header .project-name:hover{
+        color:#9FB8AD;
+        }
+      nav{    width: 100%;
+        }
+      nav .links{
+        list-style: none;
+        width: 100%;
+        text-align: center;
+        }
+        a { 
+         text-decoration:none;
+          color:whitesmoke;
+           transition: 0.3s;
+          }
+          a:hover {
+            color: #FB743E;
+            }
+          nav .links li{
+            display: inline-block;
+            padding: 1%; 
+          }
+
+
+          footer{
+            width: 100%;
+            height: 0%;
+             margin-top:0.5%;
+            padding: 1%; 
+              background-color:  #02475E;
+            /* position: absolute; */
+          } 
+          footer .fotterImg{
+            width: 30%;
+            /* padding: 10%; */
+          }
+          #footerpara{
+            text-align: center;
+          }
+
+body{
+    /* text-align: center; */
+    background-color:  whitesmoke;
+    /* margin:1.5%; */
+}
+table,th,td{
+
+    
+    padding: 7px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #0A1D37;
+    border-color: #9FB8AD;}
+    
+        main {
+            /* width: 45%; */
+            /* margin-left: 27%; */
+          text-align: center;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        
+    }
+
+    /* input[type="submit"] */
+    #submit {
+        font-size: 1.2rem;
+        font-weight: 600;
+    
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 0.5rem 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        background-color: #9FB8AD;
+        border: #9FB8AD 0.15rem solid;
+        color: #0A1D37;
+        border-radius: 13px ;
+      }
+
+      #submit:hover{
+        background-color: #C5D7BD;
+        border: #FB743E solid 0.15rem;
+      }
+    
+
+    
+    table {
+        margin-left:36.5% ;
+        width: 33rem;
+        margin: auto;
+        background-image: radial-gradient(whitesmoke,whitesmoke );
+      }
+      
+      td, th {
+        vertical-align: middle;
+        padding: 1.2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      
+      th {
+        font-size: 1.3rem;
+        font-weight: 600;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      
+      td button {
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 0.5rem;
+      }
+
+      fieldset{
+        border-radius: 2%;
+    width: 35%;
+    background-color: #0A1D37;
+    text-align: center;
+    margin-left: 32.5%;
+    padding: 2%;
+    margin-top: 3.5%;
+    margin-bottom: 2%;
+    border-radius: 13px ;
+        }
+        #user{
+position: relative;
+left: 2%;
+/* padding-right:30px; */
+margin-right: 30px;
+            
+        }
+
+        #phoneLabel{
+            position: relative;
+left: -1%;
+margin-right: 30px;
+
+        }
+
+        label{
+color:whitesmoke;
+text-align: left;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+
+        #reviewLabel{
+            position: relative;
+          
+left: -3%;
+margin-right: 30px;
+bottom: 45px;
+        }
+        #userName{
+               width: 180px;
+               margin-right: 1%;
+               border-radius: 13px ;
+               background-color: #C5D7BD;
+        }
+        #phone{
+            width: 180px;
+            margin-right: 2%;
+            position: relative;
+            left: -14px;
+            border-radius: 13px ;
+            background-color: #C5D7BD;
+     }
+     #reviewText{
+
+        width: 180px;
+        height: 60px;
+        margin-right: 2%;
+        position: relative;
+        left: -20px;
+        border-radius: 13px ;
+        background-color: #C5D7BD;
+     }
+
+ main h1,h3,h4{
+    color: #0A1D37;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+main h4{
+    font-size: 1.2rem;
+        font-weight: 600;
+    margin-bottom: 3%;
+}
