@@ -156,6 +156,7 @@ function render(){
 // 5. create inputs for the quantity and buttons and append them to the divElement 
 
 // divElement.appendChild(Picarry[i])
+
 pic.src= Product.allProducts[i].filePath;
 
 
