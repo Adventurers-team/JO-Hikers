@@ -53,6 +53,7 @@ function showCart() {
     let deleteTd = document.createElement('td');
     deleteTd.textContent = 'X';
     tr.appendChild(deleteTd);
+     deleteTd.setAttribute("title",cart.items[i].price)
 
     let quantityTd = document.createElement('td');
     quantityTd.textContent = cart.items[i].quantity;
@@ -80,10 +81,25 @@ function removeItemFromCart(event) {
   if (event.target.textContent === 'X') {
 
     cart.removeItem(event.target.id);
-    console.log(event.target.textContent);
+    console.log(event.target.title);
+
+    let total=Number(localStorage.getItem('total'))-Number(event.target.title);
+    localStorage.setItem('total',total);
+    
+    console.log(total);
 
   }
-  // TODO: Save the cart back to local storage
+  //******* */ TODO: Save the cart back to local storage
+
+//   let storageTotal = document.getElementById('total');
+//   let totalData = JSON.parse(localStorage.getItem('total'));
+//   let newTotal=[Number(totalData)]-[Number(event.target.price)];
+// console.log([Number(event.target.id.price)]+"try");
+//   console.log(newTotal);
+//   storageTotal.textContent = newTotal;
+
+
+
 
   localStorage.setItem('cart', JSON.stringify(cart.items));
   // TODO: Re-draw the cart table

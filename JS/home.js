@@ -27,29 +27,26 @@
 
 // getUsersStories();
 // render();
+// gt the reviews from the local storage
+
+
+  
+let myElement = document.getElementById('myImg'),
+myImgs =['img/wadirum.jpg','img/wadirum2.jpg','img/wadirum3.jpg','img/alarayslake1.jpg','img/alarayslake2.jpg','img/alarayslake3.jpg'
+];
+
+function changeImage(myElement, myImgs){
+
+    setInterval(function(){
+        let myRandomNum =Math.floor(Math.random()*myImgs.length);
+        myElement.src =myImgs[myRandomNum];
+    }, 1500)
+}
+changeImage(myElement, myImgs);
+console.log(changeImage);
+//////////////////////////////////////////////////////////////////////////////////////
 
 // let reviewsDiv=document.getElementById('reviewsDiv');
-
-feedbackForm.addEventListener('submit', submitReview)
-function submitReview(event) {
-  event.preventDefault();
-  let name = event.target.userName.value;
-  console.log(name);
-  let phoneNumber=event.target.phone.value;
-  console.log(phoneNumber);
-
-  let review = event.target.reviewText.value;
-  console.log(review);
-
-  new Review(name,phoneNumber,review)
-  updateReviewStorage();
-  reviewsDiv.textContent='';
-  render();
-  feedbackForm.removeEventListener('submit', submitReview);
-  tableBody.textContent='';
-  
-  // window.location.href= "index.html";
-}
 
 function getUserReview() {
     let ReviewData = localStorage.getItem('reviews');
@@ -74,8 +71,8 @@ function getUserReview() {
    
   }
   
-  getUserReview();
-  render();
   
+  getUserReview();
+render();
   
   

@@ -36,9 +36,15 @@ function submitReview(event) {
   new Review(name,phoneNumber,review)
   updateReviewStorage();
   reviewsDiv.textContent='';
-//   render();
-  feedbackForm.removeEventListener('submit', submitReview);
+  //render();
   tableBody.textContent='';
+  localStorage.setItem('cart',[]);
+  localStorage.setItem('total',0);
+  document.getElementById('total').textContent="0";
+
+  feedbackForm.removeEventListener('submit', submitReview);
+ 
+
   
   // window.location.href= "index.html";
 }
@@ -60,7 +66,7 @@ function getUserReview() {
     Review.allReviews = parsedData;
   }
 }
-  // document.getElementById('img').setAttribute( 'src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==' );
+  //document.getElementById('img').setAttribute( 'src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==' );
 
 // function render() {
 //   for (let i = 0; i < Review.allReviews.length; i++) {
