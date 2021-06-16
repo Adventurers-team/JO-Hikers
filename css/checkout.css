@@ -35,7 +35,7 @@ header img{
       height: 3% ;
       width: 100%;
       position: -webkit-sticky;
-      position: sticky;
+      /* position: sticky; */
       top: 0px;
       font-size: large;
       font-family: fantasy;
@@ -158,11 +158,13 @@ table,th,td{
         background-color: #F3BDA1;
         border: #F3BDA1 solid 0.15rem;
         color: white;
+        cursor: pointer;
       }
     
 
     
     table {
+     
         margin-left:36.5% ;
         width: 33rem;
         margin: auto;
@@ -171,11 +173,17 @@ table,th,td{
       
       td, th {
         vertical-align: middle;
+        background-color: #F3BDA1;
         padding: 1.2rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         position: relative;
          left: -13px;
          padding-top: 6%;
+         border-radius: 15px 50px;
+         padding: -10px;
+         margin: 230px;
+        
+         
       }
       
       th {
@@ -199,11 +207,11 @@ table,th,td{
     margin-left: 31.6%;
     padding: 2%;
     padding-left: 3%;
-    margin-top: 5%;
-    margin-bottom: 2%;
-    border-radius: 13px ;
+    margin-top: 4%;
+    border-radius: 13px;
     font-family: Berlin Sans FB,'Times New Roman', Times, serif;
     font-size: 18px;
+    margin-bottom: 4%;
 
         }
         #user{
@@ -266,6 +274,7 @@ bottom: 45px;
     color: #0A1D37;
     font-size: 1.2rem;
     font-weight: 600;
+  
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -273,4 +282,71 @@ main h4{
     font-size: 1.2rem;
         font-weight: 600;
     margin-bottom: 3%;
+   
+    border-radius: 15px 50px;
+
+}
+
+main h1{
+position:relative;
+margin-top: 4.4%;
+margin-bottom: 3.3%;
+
+
+}
+
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 25%;
+  height: 13%;
+  top: 15%;
+  
+  right: 0;
+  bottom: 0;
+  background-color:rgb(243,189,161,0.6);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 17px;
+  color: #0A1D37;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  font-family:'Segoe UI', Tahoma;
+  font-weight: bold;
+width: 60%;
+  
+}
+
+#overlay{
+
+  -moz-animation: cssAnimation 0s ease-in 3.2s forwards;
+  
+  -webkit-animation: cssAnimation 0s ease-in 3.2s forwards;
+  
+  -o-animation: cssAnimation 0s ease-in 3.2s forwards;
+  
+  animation: cssAnimation 0s ease-in 3.2s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+  to {
+      width:0;
+      height:0;
+      overflow:hidden;
+  }
+}
+@-webkit-keyframes cssAnimation {
+  to {
+      width:0;
+      height:0;
+      visibility:hidden;
+  }
 }

@@ -42,12 +42,23 @@ function submitReview(event) {
   localStorage.setItem('total',0);
   document.getElementById('total').textContent="0";
 
+//  on();
+// off();
+ 
   feedbackForm.removeEventListener('submit', submitReview);
  
-
+ 
   
   // window.location.href= "index.html";
 }
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+
 //creating a new story to be shown as a first story
 
 //storing the data in the local storage
@@ -84,3 +95,5 @@ function getUserReview() {
 
 getUserReview();
 // render();
+on();
+off();
