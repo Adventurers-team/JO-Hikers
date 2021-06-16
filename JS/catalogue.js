@@ -122,6 +122,7 @@ function renderCode() {
         // Do all the things ...
         // addSelectedItemToCart();
         cart.saveToLocalStorage();
+        window.location.href = "checkout.html";
         // updateCartPreview();
       }
 
@@ -175,6 +176,7 @@ function render(){
     const selectElement = document.getElementById('allprograms');
 
     const divElement = document.createElement('div');
+    divElement.setAttribute('class', 'progCard')
     selectElement.appendChild(divElement);
 
     // let price1= Product.allProducts[i].price
