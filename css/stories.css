@@ -35,7 +35,7 @@ header img{
       height: 3% ;
       width: 100%;
       position: -webkit-sticky;
-      position: sticky;
+      /* position: sticky; */
       top: 0px;
       font-size: large;
       font-family: fantasy;
@@ -201,24 +201,77 @@ padding-bottom: 5%;
 
       #submit:hover{
 
-      background-color: #F3BDA1;
+      background-color: #e0a181;
       color: white;
       transform: scale(1.5%);
       height: 10%;
       width: 30%;
-
-
+      cursor: pointer;
    
       }
+      #overlay {
+        position: fixed;
+        display: none;
+        width: 25%;
+        height: 13%;
+        top: 15%;
+        right: 0;
+        bottom: 0;
+        background-color:rgb(243,189,161,0.6);
+        z-index: 2;
+        cursor: pointer;
+      }
+      #text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 17px;
+        color: #0A1D37;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        font-family:'Segoe UI', Tahoma;
+        font-weight: bold;
+      width: 60%;
+      }
+      #overlay{
+        -moz-animation: cssAnimation 0s ease-in 3.2s forwards;
+        -webkit-animation: cssAnimation 0s ease-in 3.2s forwards;
+        -o-animation: cssAnimation 0s ease-in 3.2s forwards;
+        animation: cssAnimation 0s ease-in 3.2s forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
+      @keyframes cssAnimation {
+        to {
+            width:0;
+            height:0;
+            overflow:hidden;
+        }
+      }
+      @-webkit-keyframes cssAnimation {
+        to {
+            width:0;
+            height:0;
+            visibility:hidden;
+        }
+      }
+
 #str{
   text-align: center;
   margin: 2%;
   font-family: Berlin Sans FB,'Times New Roman', Times, serif;;
-  font-size: 25px;
+  font-size: 28px;
   color: #0A1D37;
   position: relative;
   top: 20px;
 }
+
+#str:hover{
+
+  color: #e08181;
+
+}
+
       #results{
         width: 25%;
         margin: 5%;
@@ -230,26 +283,34 @@ padding-bottom: 5%;
  #div0{
   color: #274369;
   background-color: rgba(148, 128, 177, 0.2);
-  text-align: center;
+  text-align: left;
   padding: 2%;
   margin: 1%;
   position: relative;
   top: 30%;
+  padding-bottom: 4%;
+
  }
 #h0{
   font-family: Arial, Helvetica, sans-serif;
   padding: 1%;
   font-size: 18px;
   font-weight: bold;
+  position: relative;
+  left: -10px;
 }
 
 #para0{
   font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  position: relative;
+  right:-18 px;
 }
+
 #div1{
   color: #274369;
-  background-color: rgb(88, 88, 255,0.3);
-  text-align: center;
+  background-color: rgb(88, 88, 255,0.2);
+  text-align: left;
   padding: 2%;
   margin: 1%;
   position: relative;
@@ -260,15 +321,25 @@ padding-bottom: 5%;
   padding: 1%;
   font-size: 18px;
   font-weight: bold;
+  position: relative;
+  left: -10px;
 }
+
 #para1{
   font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  position: relative;
+  width: 50%;
+  padding: 1%;
+  right: 125px;
+  bottom: 8px ;
 }
+
 
 #div2{
   color: #274369;
-  background-color: rgba(206, 153, 180, 0.2);
-  text-align: center;
+  background-color:rgb(134, 238, 130,0.3);
+  text-align: left;
   padding: 2%;
   margin: 1%;
   position: relative;
@@ -279,33 +350,47 @@ padding-bottom: 5%;
   padding: 1%;
   font-size: 18px;
   font-weight: bold;
+  position: relative;
+  left: -10px;
+
 }
 #para2{
   font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  position: relative;
+  width: 40%;
+  padding:1%;
+  right:225px;
+  bottom: 8px ;
 }
 
 #div3{
   color: #274369;
   background-color: rgba(230, 52, 126,0.3);
-  text-align: center;
+  text-align: left;
   padding: 2%;
   margin: 1%;
   position: relative;
   top: 30%;
 } 
+
 #h3{
   font-family: Arial, Helvetica, sans-serif;
   padding: 1%;
   font-size: 18px;
   font-weight: bold;
+  position: relative;
+  left: -10px;
 }
 #para3{
   font-family: Arial, Helvetica, sans-serif;
+  /* float: right; */
+  position: relative;
 }
 #div4{
   color: #274369;
   background-color: rgb(231, 148, 176,0.3) ;
-  text-align: center;
+  text-align: left;
   padding: 2%;
   margin: 1%;
   position: relative;
@@ -316,15 +401,20 @@ padding-bottom: 5%;
   padding: 1%;
   font-size: 18px;
   font-weight: bold;
+  position: relative;
+  left: -10px;
 }
 #para4{
   font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  position: relative;
+  right: 570px;
 }
 
 #div5{
   color: #274369;
   background-color: rgb(179, 207, 207,0.4);
-  text-align: center;
+  text-align: left;
   padding: 2%;
   margin: 1%;
   position: relative;
@@ -335,15 +425,20 @@ padding-bottom: 5%;
   padding: 1%;
   font-size: 18px;
   font-weight: bold;
+  position: relative;
+  left: -10px;
 }
 #para5{
   font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  position: relative;
+  right: 570px;
 }
 
 #div6{
   color: #274369;
   background-color: rgb(137, 89, 172,0.3);
-  text-align: center;
+  text-align: left;
   padding: 2%;
   margin: 1%;
   position: relative;
@@ -354,15 +449,20 @@ padding-bottom: 5%;
   padding: 1%;
   font-size: 18px;
   font-weight: bold;
+  position: relative;
+  left: -10px;
 }
 #para6{
   font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  position: relative;
+  right: 570px;
 }
 
 #div7{
   color: #274369;
   background-color: rgb(211, 103, 238,0.2);
-  text-align: center;
+  text-align: left;
   padding: 2%;
   margin: 1%;
   position: relative;
@@ -373,9 +473,14 @@ padding-bottom: 5%;
   padding: 1%;
   font-size: 18px;
   font-weight: bold;
+  position: relative;
+  left: -10px;
 }
 #para7{
   font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  position: relative;
+  right: 570px;
 }
 
     footer{
