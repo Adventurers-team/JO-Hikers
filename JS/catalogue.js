@@ -3,6 +3,8 @@
 const cart = new Cart([]);
 let container= document.getElementById('container')
 
+
+
 let pricearray = [];
 // let quantityarray=[];
 // let quantity=0;
@@ -61,6 +63,17 @@ function renderCode() {
     
     document.getElementById(`bt${i}`).addEventListener("click", display);
 
+    // document.getElementById(`bt${i}`).addEventListener("click",()=>{
+    //   if(document.getElementById(`bt${i}`).clicked == true){
+    //   swal("Hello world!")
+    //   }
+      
+    //   })
+      
+//     if(document.getElementById(`bt${i}`).clicked == true)
+// {
+//   swal("Hello world!");
+// }
 
     let name = Product.allProducts[i].name;
     let price = Product.allProducts[i].price;
@@ -82,6 +95,20 @@ function renderCode() {
       let price=Product.allProducts[Number(myId[2])].price;
       let name=Product.allProducts[Number(myId[2])].name;
       let quantity = document.getElementById(idx).value;
+
+
+      
+    // let btn = document.createElement("button");
+    // btn.innerHTML = "Add to Cart";
+    // btn.setAttribute("type", "button");
+    // btn.setAttribute("id", `bt${i}`);
+
+
+    //   if(document.getElementById("button").clicked == true)
+    // {
+    //   swal("Hello world!");
+    // }
+
       // newquant.push(quantity);
       console.log(quantity);
       // console.log(newquant);
@@ -163,16 +190,9 @@ catalogForm.addEventListener('submit', handleSubmit);
 // let Picarry=[["img/alazraq2.jpg","img/alazraq3.jpg"],["img/dibeen1.jpg","img/dibeen2.jpg"]],;
 function render(){
   for (let i = 0; i < 7; i++) {
-// 1. get the container by id
-// 2. create a divElement for each object
-// 3. create p and append it to the divElement
-// 4. create imgs and append them tp the divElement
-// 5. create inputs for the quantity and buttons and append them to the divElement 
 
 // divElement.appendChild(Picarry[i])
 // pic.src= Product.allProducts[i].filePath;
-
-
     const selectElement = document.getElementById('allprograms');
     // const card =document.createElement('div');
 
@@ -201,13 +221,9 @@ function render(){
     pic.src= Product.allProducts[i].filePath;
     console.log(pic);
 
-    
-
     let price1=document.createElement('number');
     divElement.appendChild(price1)
     price1.textContent=` price :  ${Product.allProducts[i].price} JOD`
-
-
 
     let quantity = document.createElement("INPUT");
     quantity.setAttribute("type", "number");
@@ -218,11 +234,19 @@ function render(){
     // let value=quantity.getAttribute("value");
 
     //  document.write(value);
-    //  console.log(value);
+    // //  console.log(value);
     let btn = document.createElement("button");
     btn.innerHTML = "Add to Cart";
     btn.setAttribute("type", "button");
     btn.setAttribute("id", `bt${i}`);
+    btn.setAttribute("")
+    // // document.getElementById(`bt${i}`).addEventListener("click",()=>{
+    // //   if(document.getElementById(`bt${i}`).clicked == true){
+    // //   swal("Hello world!")
+    // //   }
+      
+    //   })
+      
 
 
     divElement.appendChild(btn);
@@ -232,13 +256,14 @@ function render(){
     btn.name = Product.allProducts[i].name;
 
     document.getElementById(`bt${i}`).addEventListener("click", display);
-
-
+    
     let name = Product.allProducts[i].name;
     let price = Product.allProducts[i].price;
     console.log(name);
     
     console.log(price);
+
+  
 
     
 
