@@ -31,6 +31,34 @@
                        </ul>
                     </nav>
                 </div>
+                <header>
+                  <h1>You are buying:</h1>
+                </header>
+                <section class="deck col-1">
+                  <div id="cart-container" class="card">
+                    <table id="cart">
+                      <thead>
+                        <tr>
+                          <th>Remove <br>Program</th>
+                          <th>Quantity</th>
+                          <th>Program <br>Name</th>
+                          <th>Price</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                      <tfoot></tfoot>
+                    </table>
+                  </div>
+                  <br>
+                  <h3>Total Price: <h4 id="total"></h4>
+                  </h3>
+                  
+          
+                </section>
+
+
+
+
     <div>
       <form id="feedback">
         <fieldset>
@@ -55,22 +83,28 @@
 
             <div id="reviewsDiv"></div>
 
-            <button id="submit">Approve</button>
+            <div id="overlay" onclick="off()">
+              <div id="text">&#9989 Successfully Booked <br> Thank you</div>
+            </div>
+           <div> <button onclick="on()" id="submit">BUY</button> </div>
+
         </fieldset>
-    </form>
+    
   
       </form>
+  
     </div>
+
 
     <div>
 
-      <section class="deck col-1">
+      <!-- <section class="deck col-1">
         <div class="card">
           <br>
           <header>
             <h1>You are buying:</h1>
           </header>
-          <!-- <div class="copy">
+           <div class="copy">
             <ol>
               <li>You are buying:</li>
             </ol>
@@ -78,7 +112,7 @@
         </div>
       </section>
 
-      <section class="deck col-1">
+      <!-- <section class="deck col-1">
         <div id="cart-container" class="card">
           <table id="cart">
             <thead>
@@ -98,9 +132,9 @@
         </h3>
         
 
-      </section>
+      </section> -->
 
-    </div>
+    </div> 
   </main>
   <footer>
     <span id="fotterp"> 
@@ -127,8 +161,16 @@
   <script src="JS/cart.js"></script>
   <script src="JS/review.js"></script>
   
-
-
+  <!-- <script>
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+    
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }
+    </script>
+ -->
 
 
 </body>
