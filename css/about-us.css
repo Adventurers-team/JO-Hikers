@@ -72,16 +72,48 @@ header img{
           height: 0%;
            margin-top:0.5%;
           padding: 1%; 
-            background-color:  #02475E;
-          /* position: absolute; */
+          background-color:  #0A1D37;
+         
         } 
+        
         footer .fotterImg{
-          width: 30%;
-          /* padding: 10%; */
+          position: relative;
+          top: 28px;
+    
+        }
+        #fotterp{
+          font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+          color: #F3BDA1;
+          position: relative;
+          left: 1%;
+          top: 15px;
         }
         #footerpara{
           text-align: center;
+          color: #F3BDA1;
+          font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+          position: relative;
+          bottom: -5px ;
+          
         }
+    
+        #footerLocation{
+          text-align: right;
+          color: #F3BDA1;
+          font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+          position: relative;
+          bottom: 35px;
+          right: 4%;
+        }
+        #address{
+          text-align: right;
+          color: #F3BDA1;
+          font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+          position: relative;
+          bottom: 23px;
+          right: 0%;
+        }
+
 /* 
    .pic1 {
     float: left;
@@ -119,10 +151,12 @@ header img{
     display: table;
   }  */
 .H {
-margin-top: 3%;
-  font-size: 60px;
-
+ margin-top: 4%;
+  font-size: 43px;
   text-align: center;
+  font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+  color: #0A1D37;
+  text-shadow: 3px 3px 8px gray;
 
 
 }
@@ -154,15 +188,21 @@ margin-top: 3%;
 
 .name {
   margin-top: 30px;
-  font-size: 30px;
+  font-size: 28px;
+  text-align: center;
+  font-family: Berlin Sans FB,'Times New Roman', Times, serif;;
+  color: #0A1D37;
 }
 
 
 .row1 p {
   font-size: 15px;
   margin-top: 20px;
-  text-align: justify;
+  text-align: center;
   margin-left:5% ;
+  font-family:  'Tahoma', Geneva, Verdana, sans-serif;
+  color: #1b3355;
+
 }
 
 .our-picture1{
@@ -184,6 +224,7 @@ margin-top: 3%;
   filter: grayscale(100%);
   cursor: pointer;
   transition: 400ms;
+  margin-top: 5%;
 }
 
 .row2:hover .profile-img1 {
@@ -192,14 +233,21 @@ margin-top: 3%;
 
 .name1 {
   margin-top: 30px;
-  font-size: 30px;
+  font-size: 28px;
   margin-left: 18%;
+  font-family: Berlin Sans FB,'Times New Roman', Times, serif;;
+  color: #0A1D37;
+
 }
 
 
 .row2 p {
   font-size: 15px;
   margin-top: 20px;
-  text-align: justify;
+  margin-bottom: 5%;
+  text-align: center;
   margin-left:5% ;
+  font-family:  'Tahoma', Geneva, Verdana, sans-serif;
+  color: #1b3355;
+
 }
