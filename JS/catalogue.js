@@ -122,6 +122,7 @@ function renderCode() {
         // Do all the things ...
         // addSelectedItemToCart();
         cart.saveToLocalStorage();
+        window.location.href = "checkout.html";
         // updateCartPreview();
       }
 
