@@ -122,6 +122,7 @@ function renderCode() {
         // Do all the things ...
         // addSelectedItemToCart();
         cart.saveToLocalStorage();
+        window.location.href = "checkout.html";
         // updateCartPreview();
       }
 
@@ -173,8 +174,11 @@ function render(){
 
 
     const selectElement = document.getElementById('allprograms');
+    // const card =document.createElement('div');
+
 
     const divElement = document.createElement('div');
+    divElement.setAttribute('class', 'progCard')
     selectElement.appendChild(divElement);
 
     // let price1= Product.allProducts[i].price
@@ -187,6 +191,9 @@ function render(){
     title.textContent=Product.allProducts[i].name;
     console.log(title);
 
+    let para= document.createElement('p')
+    divElement.appendChild(para);
+    para.textContent=Product.allProducts[i].paragraph;
     
     let pic= document.createElement('img');
 
@@ -194,9 +201,7 @@ function render(){
     pic.src= Product.allProducts[i].filePath;
     console.log(pic);
 
-    let para= document.createElement('p')
-    divElement.appendChild(para);
-    para.textContent=Product.allProducts[i].paragraph;
+    
 
     let price1=document.createElement('number');
     divElement.appendChild(price1)
