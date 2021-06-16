@@ -87,8 +87,8 @@ main {
 
 main img {
 
-    height: 40%;
-    width: 40%;
+    height: 50%;
+    width: 50%;
     margin: auto;
     display: block;
 
@@ -99,14 +99,13 @@ main img {
 main h2 {
 font-size: x-large;
 font-weight: bold;
-margin-top: 10%;
+margin-top: 5%;
 margin-bottom: 5%;
 }
 
 main p {
    text-align: center;
   
-
 }
 
 
@@ -120,6 +119,11 @@ main p {
     text-decoration: none;
     /* display: inline-block; */
     font-size: 16px;
+    float: right;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+   
   }
 
   #bt0, #bt1, #bt2, #bt3, #bt4, #bt5,#bt6 {
@@ -137,8 +141,8 @@ main p {
   }
 
  #in0, #in1, #in2,#in3,#in4,#in5,#in6  {
-        background-color: #3CBC8D;
-        color: white;
+        background-color: #d5d8d8;
+        color: black;
         margin: 2%;
         
 
@@ -154,10 +158,28 @@ main p {
       
   }
 
+#h3 {
+  margin: 5%;
+  text-align: left;
+font-weight: bold;
+font-size: x-large;
+}
+
+main section {
+
+  margin: 9%;
+
+  padding: 5%;
+}
 
 
 
-
+.progCard {
+  border: 3px #02475E solid;
+padding: 7%;
+border-radius: 20%;
+background-color: #d5d8d8;
+}
 
 
 
