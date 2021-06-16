@@ -35,7 +35,7 @@ header img{
       height: 3% ;
       width: 100%;
       position: -webkit-sticky;
-      position: sticky;
+      /* position: sticky; */
       top: 0px;
       font-size: large;
       font-family: fantasy;
