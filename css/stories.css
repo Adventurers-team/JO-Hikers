@@ -5,8 +5,8 @@ header img{
   width: 7%;
   height: 7%;
   position: relative;
-  top: 30px;
-  left: 30px
+  top:40px;
+  left:268px
   }
   header{
     width: 100%;
@@ -23,27 +23,26 @@ header img{
       bottom: 40px;
 
       font-size: 400%; 
-      color: #02475e;
+      color: #0A1D37;
       text-align: center; 
       letter-spacing: 30px; 
-      font-family: 'Kirang Haerang', cursive;
-
-      /* font-weight: bold; */
-            /* margin-right: 40%; */
+      font-family:'Righteous', 'Kirang Haerang', cursive;
+      
+  
     }
   .nav{
-      background-color:  #02475e;
+      background-color:  #0A1D37;
       height: 3% ;
       width: 100%;
       position: -webkit-sticky;
       position: sticky;
       top: 0px;
-      /* font-weight: bold; */
       font-size: large;
       font-family: fantasy;
       }
+
       header .project-name:hover{
-      color:#FB743E;
+      color:#F3BDA1;
       }
     nav{    width: 100%;
       }
@@ -51,6 +50,8 @@ header img{
       list-style: none;
       width: 100%;
       text-align: center;
+      position: relative;
+      right:20px;
     
       }
       a { 
@@ -59,7 +60,7 @@ header img{
          transition: 0.3s;
         }
         a:hover {
-          color: #FB743E;
+          color: #F3BDA1;
           }
         nav .links li{
           display: inline-block;
@@ -68,42 +69,16 @@ header img{
         }
 
 body{
-    background-color: white;
+    background-color: whitesmoke;
     background-size: cover;
     min-height: 100vh;
     z-index: 1;
-    /* height: 50px; */
+  
 
 }
 
-/* main img{
-  height: 10%;
-  width: 10%;
 
-} */
-
-
-
-       /*                                                              */
-
-       /* #stories{
-           width: 50%;
-           height: 70%;
-       } */
-       /* #paragraph{
-        font-size: 170%;
-        width: 100%;
-        margin: 2%;
-        margin-left: 50%;
-        color: #632d2d;
-        font-family: Garamond, serif;
-        text-align:center;
-        font-weight: bolder;
-      
-       }
-       */
 fieldset{
-border: #FB743E  transparent ;
 border-radius: 13px;
 width: 70%;
 height: 410px;
@@ -117,21 +92,18 @@ padding-bottom: 5%;
 
        form{
            margin: 5%;
-           margin-left: 30%;
+           margin-left: 31%;
            width: 50%;
            height: 80%;
        }
 
         #paragraph{
          position: relative;
-         /* top: 10%; */
-         /* left: 50%; */
-         /* right: 50%; */
         font-size: 25px;
         margin:5% ;
         margin-bottom: 2%;
         color: #0A1D37;
-        font-family: Berlin Sans FB,'Times New Roman', Times, serif;;
+        font-family: Berlin Sans FB,'Times New Roman', Times, serif;
         text-align:center;
       
        }
@@ -229,7 +201,7 @@ padding-bottom: 5%;
 
       #submit:hover{
 
-      background-color: #FB743E;
+      background-color: #F3BDA1;
       color: white;
       transform: scale(1.5%);
       height: 10%;
@@ -411,7 +383,7 @@ padding-bottom: 5%;
       height: 0%;
        margin-top:0.5%;
       padding: 1%; 
-      background-color:  #02475e;
+      background-color:  #0A1D37;
      
     } 
     
@@ -422,14 +394,14 @@ padding-bottom: 5%;
     }
     #fotterp{
       font-family: Berlin Sans FB,'Times New Roman', Times, serif;
-      color: cadetblue;
+      color: #F3BDA1;
       position: relative;
       left: 1%;
       top: 15px;
     }
     #footerpara{
       text-align: center;
-      color: cadetblue;
+      color: #F3BDA1;
       font-family: Berlin Sans FB,'Times New Roman', Times, serif;
       position: relative;
       bottom: -5px ;
@@ -438,7 +410,7 @@ padding-bottom: 5%;
 
     #footerLocation{
       text-align: right;
-      color: cadetblue;
+      color: #F3BDA1;
       font-family: Berlin Sans FB,'Times New Roman', Times, serif;
       position: relative;
       bottom: 35px;
@@ -446,7 +418,7 @@ padding-bottom: 5%;
     }
     #address{
       text-align: right;
-      color: cadetblue;
+      color: #F3BDA1;
       font-family: Berlin Sans FB,'Times New Roman', Times, serif;
       position: relative;
       bottom: 23px;
