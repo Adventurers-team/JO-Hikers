@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-/* *{
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-} 
-=======
 *{
   box-sizing: border-box;
-}
->>>>>>> 2b54e87d7fb09b79aa2f36ca9d4d5b7116715aaf
-body{
-
-  background-color:  whitesmoke;
 }
 header img{
   width: 7%;
   height: 7%;
   position: relative;
-  top: 30px;
-  left: 30px
+  top:40px;
+  left:268px
   }
   header{
     width: 100%;
@@ -29,30 +17,32 @@ header img{
     z-index: 2;
     position: relative;
   } 
+  
       header .project-name{ 
       position: relative;
       bottom: 40px;
+
       font-size: 400%; 
-      color: #02475E;
+      color: #0A1D37;
       text-align: center; 
       letter-spacing: 30px; 
-      font-family: 'Righteous', cursive;
-      /* font-weight: bold; */
-            /* margin-right: 40%; */
+      font-family:'Righteous', 'Kirang Haerang', cursive;
+      
+  
     }
   .nav{
-      background-color:  #02475E;
+      background-color:  #0A1D37;
       height: 3% ;
       width: 100%;
       position: -webkit-sticky;
       position: sticky;
       top: 0px;
-      /* font-weight: bold; */
       font-size: large;
       font-family: fantasy;
       }
+
       header .project-name:hover{
-      color:#9FB8AD;
+      color:#F3BDA1;
       }
     nav{    width: 100%;
       }
@@ -60,6 +50,9 @@ header img{
       list-style: none;
       width: 100%;
       text-align: center;
+      position: relative;
+      right:20px;
+    
       }
       a { 
        text-decoration:none;
@@ -67,14 +60,13 @@ header img{
          transition: 0.3s;
         }
         a:hover {
-          color: #FB743E;
+          color: #F3BDA1;
           }
         nav .links li{
           display: inline-block;
           padding: 1%; 
+                                     
         }
-
-
         footer{
           width: 100%;
           height: 0%;
@@ -125,9 +117,6 @@ header img{
     content: "";
     clear: both;
     display: table;
-<<<<<<< HEAD
-  }
-=======
   }  */
 .H {
 margin-top: 3%;
@@ -214,4 +203,3 @@ margin-top: 3%;
   text-align: justify;
   margin-left:5% ;
 }
->>>>>>> 2b54e87d7fb09b79aa2f36ca9d4d5b7116715aaf

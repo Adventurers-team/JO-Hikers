@@ -173,8 +173,11 @@ function render(){
 
 
     const selectElement = document.getElementById('allprograms');
+    // const card =document.createElement('div');
+
 
     const divElement = document.createElement('div');
+    divElement.setAttribute('class', 'progCard')
     selectElement.appendChild(divElement);
 
     // let price1= Product.allProducts[i].price
