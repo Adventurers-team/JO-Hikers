@@ -35,7 +35,7 @@ header img{
       height: 3% ;
       width: 100%;
       position: -webkit-sticky;
-      position: sticky;
+      /* position: sticky; */
       top: 0px;
       font-size: large;
       font-family: fantasy;
@@ -74,6 +74,7 @@ header img{
            margin-top:0.5%;
           padding: 1%; 
           background-color:  #0A1D37;
+          margin-top: 5%;
          
         } 
         
@@ -116,7 +117,16 @@ header img{
         }
 
 #galleryintro{
-    margin-top: 70px;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 2px 2px 8px gray ;
+    margin-top: 7%;
+    margin-bottom: 4%;
+    /* margin: 5%; */
+    font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+    color: teal;
+    position: relative;
+    left: -19px;
 }
 
 .Galleryimges{
@@ -125,16 +135,37 @@ header img{
 
 }
 .pics{
-margin-left: 13%;
+margin-left: 9%;
+
 
 }
 
 #video {
-    margin-left: 30%;
+    margin-left: 26%;
+    margin-bottom: 5%;
 }
 
 .gallery1 {
     font-size:30px;
     text-align: left;
+    text-align: center;
+    text-shadow: 2px 2px 8px gray ;
+    margin-bottom: 4%;
+    font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+    color: teal;
+    position: relative;
+    left: -100px;
 
+}
+
+.para{
+  text-align: center;
+  font-size: 20px;
+  margin: 3%;
+  position: relative;
+  left: -70px;
+  font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+  color: #0A1D37;
+
+  
 }
