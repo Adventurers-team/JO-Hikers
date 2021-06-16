@@ -1,142 +1,426 @@
-body{
-    background-color: rgb(191 211 228);
-    background-size: cover;
-    min-height: 100vh;
-    z-index: 1;
-    /* height: 50px; */
-
+*{
+  box-sizing: border-box;
 }
-header{
+header img{
+  width: 7%;
+  height: 7%;
+  position: relative;
+  top:40px;
+  left:268px
+  }
+  header{
     width: 100%;
-    height: 0%;
-     margin-top:0.5%;
-    padding: 1%; 
-    background-color:  rgb(104 152 145);
+    height: 10%;
+     margin-top:0%;
+    padding: 0%; 
+    background-color:  whitesmoke;
     z-index: 2;
     position: relative;
   } 
   
       header .project-name{ 
+      position: relative;
+      bottom: 40px;
+
       font-size: 400%; 
-      color: #00335F;
+      color: #0A1D37;
       text-align: center; 
       letter-spacing: 30px; 
-      font-family: 'Lobster', cursive;
-      /* margin-right: 40%; */
+      font-family:'Righteous', 'Kirang Haerang', cursive;
+      
+  
     }
   .nav{
-  background-color: #75A59E ;
-  height: 3% ;
-  width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  }
-  header .project-name:hover{
-  color: rgb(12, 12, 12);
-  }
-nav{    width: 100%;
-  }
-nav .links{
-  list-style: none;
-  width: 100%;
-  text-align: center;
-
-  }
-  a { 
-   text-decoration:none;
-    color: #dbeeff;
-     transition: 0.3s;
-    }
-    a:hover {
-      color: rgb(24, 212, 181);
+      background-color:  #0A1D37;
+      height: 3% ;
+      width: 100%;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0px;
+      font-size: large;
+      font-family: fantasy;
       }
-    nav .links li{
-      display: inline-block;
-      padding: 1%; 
-                                 
-    }
-    #fotterp{
-        text-align: center;
+
+      header .project-name:hover{
+      color:#F3BDA1;
       }
-      
-      footer{
-        width: 100%;
-        height: 0%;
-         margin-top:0.5%;
-        padding: 1%; 
-        background-color:  rgb(104 152 145);
-       
-        /* position: absolute; */
-      } 
-      
-      footer .fotterImg{
-        width: 30%;
-        /* padding: 10%; */
+    nav{    width: 100%;
       }
-      footer img {
-        height: 5%;
-        width: 5% ;
-       }
+    nav .links{
+      list-style: none;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      right:20px;
+    
+      }
+      a { 
+       text-decoration:none;
+        color:whitesmoke;
+         transition: 0.3s;
+        }
+        a:hover {
+          color: #F3BDA1;
+          }
+        nav .links li{
+          display: inline-block;
+          padding: 1%; 
+                                     
+        }
+
+body{
+    background-color: whitesmoke;
+    background-size: cover;
+    min-height: 100vh;
+    z-index: 1;
+  
+
+}
 
 
-       /*                                                              */
+fieldset{
+border-radius: 13px;
+width: 70%;
+height: 410px;
+background-color: #0A1D37;
+text-align: center;
+padding-top: 4%;
+padding-bottom: 5%;
 
-       /* #stories{
-           width: 50%;
-           height: 70%;
-       } */
-       /* #paragraph{
-        font-size: 170%;
-        width: 100%;
-        margin: 2%;
-        margin-left: 50%;
-        color: #632d2d;
-        font-family: Garamond, serif;
-        text-align:center;
-        font-weight: bolder;
-      
-       }
-       */
 
+}
 
        form{
-           margin: 2%;
-           margin-left: 35%;
+           margin: 5%;
+           margin-left: 31%;
            width: 50%;
-           
+           height: 80%;
        }
 
-       form #paragraph{
-        font-size: 150%;
-        width: 100%;
-        margin: 5%;
-        margin-left: -20%;
-        color: #632d2d;
-        font-family: Garamond, serif;
+        #paragraph{
+         position: relative;
+        font-size: 25px;
+        margin:5% ;
+        margin-bottom: 2%;
+        color: #0A1D37;
+        font-family: Berlin Sans FB,'Times New Roman', Times, serif;
         text-align:center;
-        font-weight: bolder;
       
        }
        #userName{
-          width: 20%;
-          margin-left: 2%;
+          margin-left: -1%;
+          color: #082f64;
+          width: 50%;
+          position: relative;
+          left: 5%;
+          border-radius: 13px;
+          height: 6.5%;
+
          
        }
+
+       .p{
+        color: #082f64;
+       }
        #programs{
-           width: 21.5%;
-           margin-left: 4%;
-       }
-       input{
-        font-family: Garamond, serif;
-        color: blanchedalmond;
+           margin-left: 2%;
+           width: 50%;
+           position: relative;
+           left: 5%;
+           border-radius: 13px;
+           height: 6.5%;
+
+
+
+           
        }
 
-       #results{
-           width: 25%;
+       #picture{
+        margin-left: 1%;
+        color: #082f64;
+        width: 50%;
+        border-radius: 13px;
+       height: 6.5%;
 
-           border:1px solid black;
-           margin-left: 32%;
-           overflow: scroll;
+    
        }
+      .userName{
+
+        color: white;
+        font-family:Berlin Sans FB,'Times New Roman', Times, serif;;
+        font-size: 18px;
+        position: relative;
+        left: 1%;
+      }
+      .programField{
+        color: whitesmoke;
+        font-family:Berlin Sans FB,'Times New Roman', Times, serif; ;
+        font-size: 18px;
+        margin-left: 1%;
+        position: relative;
+        left: 4%;
+      }
+      .storyField{
+        color: whitesmoke;
+        font-family:Berlin Sans FB,'Times New Roman', Times, serif; ;
+        font-size: 18px;
+        margin-left: 2%;
+        margin-right:2% ;
+        position: relative;
+        bottom: 38%;
+      }
+      .urlField{
+        color: whitesmoke;
+        font-family:Berlin Sans FB,'Times New Roman', Times, serif; ;
+        font-size: 18px;
+        margin-left: -4%;
+        margin-right:2% ;
+        position: relative;
+        left: 1%;
+
+      }
+
+      #storyText{
+        color:#082f64;
+        border-radius: 13px;
+      } 
+
+      #submit{
+        background-color: whitesmoke;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        color: #0A1D37;
+        font-family:Berlin Sans FB,'Times New Roman', Times, serif; ;
+        font-size: 16px;
+        padding: 1%;
+        border-radius: 13px;
+        
+
+       
+      }
+
+      #submit:hover{
+
+      background-color: #F3BDA1;
+      color: white;
+      transform: scale(1.5%);
+      height: 10%;
+      width: 30%;
+
+
+   
+      }
+#str{
+  text-align: center;
+  margin: 2%;
+  font-family: Berlin Sans FB,'Times New Roman', Times, serif;;
+  font-size: 25px;
+  color: #0A1D37;
+  position: relative;
+  top: 20px;
+}
+      #results{
+        width: 25%;
+        margin: 5%;
+        margin-left: 15%;
+        width: 70%;
+        height: 100%;
+    }
+
+ #div0{
+  color: #274369;
+  background-color: rgba(148, 128, 177, 0.2);
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  position: relative;
+  top: 30%;
+ }
+#h0{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#para0{
+  font-family: Arial, Helvetica, sans-serif;
+}
+#div1{
+  color: #274369;
+  background-color: rgb(88, 88, 255,0.3);
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  position: relative;
+  top: 30%;
+} 
+#h1{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
+  font-size: 18px;
+  font-weight: bold;
+}
+#para1{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#div2{
+  color: #274369;
+  background-color: rgba(206, 153, 180, 0.2);
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  position: relative;
+  top: 30%;
+} 
+#h2{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
+  font-size: 18px;
+  font-weight: bold;
+}
+#para2{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#div3{
+  color: #274369;
+  background-color: rgba(230, 52, 126,0.3);
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  position: relative;
+  top: 30%;
+} 
+#h3{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
+  font-size: 18px;
+  font-weight: bold;
+}
+#para3{
+  font-family: Arial, Helvetica, sans-serif;
+}
+#div4{
+  color: #274369;
+  background-color: rgb(231, 148, 176,0.3) ;
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  position: relative;
+  top: 30%;
+} 
+#h4{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
+  font-size: 18px;
+  font-weight: bold;
+}
+#para4{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#div5{
+  color: #274369;
+  background-color: rgb(179, 207, 207,0.4);
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  position: relative;
+  top: 30%;
+} 
+#h5{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
+  font-size: 18px;
+  font-weight: bold;
+}
+#para5{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#div6{
+  color: #274369;
+  background-color: rgb(137, 89, 172,0.3);
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  position: relative;
+  top: 30%;
+} 
+#h6{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
+  font-size: 18px;
+  font-weight: bold;
+}
+#para6{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#div7{
+  color: #274369;
+  background-color: rgb(211, 103, 238,0.2);
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  position: relative;
+  top: 30%;
+} 
+#h7{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
+  font-size: 18px;
+  font-weight: bold;
+}
+#para7{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+    footer{
+      width: 100%;
+      height: 0%;
+       margin-top:0.5%;
+      padding: 1%; 
+      background-color:  #0A1D37;
+     
+    } 
+    
+    footer .fotterImg{
+      position: relative;
+      top: 28px;
+
+    }
+    #fotterp{
+      font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+      color: #F3BDA1;
+      position: relative;
+      left: 1%;
+      top: 15px;
+    }
+    #footerpara{
+      text-align: center;
+      color: #F3BDA1;
+      font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+      position: relative;
+      bottom: -5px ;
       
+    }
+
+    #footerLocation{
+      text-align: right;
+      color: #F3BDA1;
+      font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+      position: relative;
+      bottom: 35px;
+      right: 4%;
+    }
+    #address{
+      text-align: right;
+      color: #F3BDA1;
+      font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+      position: relative;
+      bottom: 23px;
+      right: 0%;
+    }

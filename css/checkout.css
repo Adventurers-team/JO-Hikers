@@ -1,83 +1,120 @@
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+header img{
+  width: 7%;
+  height: 7%;
+  position: relative;
+  top:40px;
+  left:268px
   }
-  header img{
-    width: 7%;
-    height: 7%;
+  header{
+    width: 100%;
+    height: 10%;
+     margin-top:0%;
+    padding: 0%; 
+    background-color:  whitesmoke;
+    z-index: 2;
     position: relative;
-    top: 30px;
-    left: 30px
-    }
-    header{
-      width: 100%;
-      height: 10%;
-       margin-top:0%;
-      padding: 0%; 
-      background-color:  whitesmoke;
-      z-index: 2;
+  } 
+  
+      header .project-name{ 
       position: relative;
-    } 
-        header .project-name{ 
-        position: relative;
-        bottom: 40px;
-        font-size: 400%; 
-        color: #02475E;
-        text-align: center; 
-        letter-spacing: 30px; 
-        font-family: 'Righteous', cursive;
-        /* font-weight: bold; */
-              /* margin-right: 40%; */
+      bottom: 40px;
+
+      font-size: 400%; 
+      color: #0A1D37;
+      text-align: center; 
+      letter-spacing: 30px; 
+      font-family:'Righteous', 'Kirang Haerang', cursive;
+      
+  
+    }
+  .nav{
+      background-color:  #0A1D37;
+      height: 3% ;
+      width: 100%;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0px;
+      font-size: large;
+      font-family: fantasy;
       }
-    .nav{
-        background-color:  #02475E;
-        height: 3% ;
-        width: 100%;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0px;
-        /* font-weight: bold; */
-        font-size: large;
-        font-family: fantasy;
-        }
-        header .project-name:hover{
-        color:#9FB8AD;
-        }
-      nav{    width: 100%;
-        }
-      nav .links{
-        list-style: none;
-        width: 100%;
-        text-align: center;
-        }
-        a { 
-         text-decoration:none;
-          color:whitesmoke;
-           transition: 0.3s;
-          }
-          a:hover {
-            color: #FB743E;
-            }
-          nav .links li{
-            display: inline-block;
-            padding: 1%; 
-          }
 
+      header .project-name:hover{
+      color:#F3BDA1;
+      }
+    nav{    width: 100%;
+      }
+    nav .links{
+      list-style: none;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      right:20px;
+    
+      }
+      a { 
+       text-decoration:none;
+        color:whitesmoke;
+         transition: 0.3s;
+        }
+        a:hover {
+          color: #F3BDA1;
+          }
+        nav .links li{
+          display: inline-block;
+          padding: 1%; 
+                                     
+        }
 
-          footer{
-            width: 100%;
-            height: 0%;
-             margin-top:0.5%;
-            padding: 1%; 
-              background-color:  #02475E;
-            /* position: absolute; */
-          } 
-          footer .fotterImg{
-            width: 30%;
-            /* padding: 10%; */
-          }
-          #footerpara{
-            text-align: center;
-          }
+        footer{
+          width: 100%;
+          height: 0%;
+           margin-top:0.5%;
+          padding: 1%; 
+          background-color:  #0A1D37;
+         
+        } 
+        
+        footer .fotterImg{
+          position: relative;
+          top: 28px;
+    
+        }
+        #fotterp{
+          font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+          color: #F3BDA1;
+          position: relative;
+          left: 1%;
+          top: 15px;
+        }
+        #footerpara{
+          text-align: center;
+          color: #F3BDA1;
+          font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+          position: relative;
+          bottom: -5px ;
+          
+        }
+    
+        #footerLocation{
+          text-align: right;
+          color: #F3BDA1;
+          font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+          position: relative;
+          bottom: 35px;
+          right: 4%;
+        }
+        #address{
+          text-align: right;
+          color: #F3BDA1;
+          font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+          position: relative;
+          bottom: 23px;
+          right: 0%;
+        }
+
 
 body{
     /* text-align: center; */
@@ -90,7 +127,8 @@ table,th,td{
     padding: 7px;
     font-family:Arial, Helvetica, sans-serif;
     color: #0A1D37;
-    border-color: #9FB8AD;}
+    border-color: #9FB8AD;
+  }
     
         main {
             /* width: 45%; */
@@ -104,20 +142,22 @@ table,th,td{
     #submit {
         font-size: 1.2rem;
         font-weight: 600;
-    
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Berlin Sans FB,'Times New Roman', Times, serif;
         padding: 0.5rem 1.5rem;
         margin-bottom: 2rem;
         border-radius: 0.5rem;
-        background-color: #9FB8AD;
+        background-color: white;
         border: #9FB8AD 0.15rem solid;
         color: #0A1D37;
         border-radius: 13px ;
+        position: relative;
+        top: 20px;
       }
 
       #submit:hover{
-        background-color: #C5D7BD;
-        border: #FB743E solid 0.15rem;
+        background-color: #F3BDA1;
+        border: #F3BDA1 solid 0.15rem;
+        color: white;
       }
     
 
@@ -133,12 +173,16 @@ table,th,td{
         vertical-align: middle;
         padding: 1.2rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+         left: -13px;
+         padding-top: 6%;
       }
       
       th {
         font-size: 1.3rem;
         font-weight: 600;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
       }
       
       td button {
@@ -152,11 +196,15 @@ table,th,td{
     width: 35%;
     background-color: #0A1D37;
     text-align: center;
-    margin-left: 32.5%;
+    margin-left: 31.6%;
     padding: 2%;
-    margin-top: 3.5%;
+    padding-left: 3%;
+    margin-top: 5%;
     margin-bottom: 2%;
     border-radius: 13px ;
+    font-family: Berlin Sans FB,'Times New Roman', Times, serif;
+    font-size: 18px;
+
         }
         #user{
 position: relative;
@@ -176,7 +224,6 @@ margin-right: 30px;
         label{
 color:whitesmoke;
 text-align: left;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
         }
 
@@ -188,28 +235,31 @@ margin-right: 30px;
 bottom: 45px;
         }
         #userName{
-               width: 180px;
+               width: 200px;
                margin-right: 1%;
                border-radius: 13px ;
-               background-color: #C5D7BD;
+               color: #0A1D37;
+               height: 24px;
         }
         #phone{
-            width: 180px;
+            width: 200px;
             margin-right: 2%;
             position: relative;
             left: -14px;
             border-radius: 13px ;
-            background-color: #C5D7BD;
+            color: #0A1D37;
+            height: 24px;
+
      }
      #reviewText{
 
-        width: 180px;
+        width: 200px;
         height: 60px;
         margin-right: 2%;
         position: relative;
         left: -20px;
         border-radius: 13px ;
-        background-color: #C5D7BD;
+        color: #0A1D37;
      }
 
  main h1,h3,h4{
