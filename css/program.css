@@ -112,67 +112,78 @@ header img{
 main {
     background-color: whitesmoke;
    text-align: center;
+   font-family: Berlin Sans FB,'Times New Roman', Times, serif;
 }
 
 main img {
 
-    height: 50%;
-    width: 50%;
+    height: 60%;
+    width: 60%;
     margin: auto;
     display: block;
 
 
 
-} 
+
+
+  } 
+
+
 
 main h2 {
 font-size: x-large;
 font-weight: bold;
-margin-top: 5%;
-margin-bottom: 5%;
+margin-top: 2%;
+margin-bottom: 2%;
 }
 
 main p {
    text-align: center;
+   margin:5%;
+   font-size: large;
+   
   
 }
 
 
 
-#Btn {
+/* #Btn {
     background-color: #4CAF50; 
     
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    /* display: inline-block; */
+     display: inline-block; 
     font-size: 16px;
     float: right;
     position: -webkit-sticky;
     position: sticky;
     top: 0%;
    
-  }
+  } */
 
-  #bt0, #bt1, #bt2, #bt3, #bt4, #bt5,#bt6 {
+  /* #bt0, #bt1, #bt2, #bt3, #bt4, #bt5,#bt6 {
     background-color: #FB743E; 
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     /* display: inline-block; */
-    font-size: 16px;
+    /* font-size: 16px;
     margin: 2%;
     
     
 
-  }
+  } */ 
+
+  
 
  #in0, #in1, #in2,#in3,#in4,#in5,#in6  {
         background-color: #d5d8d8;
         color: black;
         margin: 2%;
+      
         
 
   }
@@ -181,34 +192,98 @@ main p {
   main div p {
       color: #02475E;
     margin-bottom: 5%;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
     
       
   }
 
 #h3 {
-  margin: 5%;
+  margin: 1%;
   text-align: left;
 font-weight: bold;
 font-size: x-large;
 }
 
 main section {
+margin-top: 2%;
+  /* margin: 4%; */
 
-  margin: 9%;
-
-  padding: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 
 
 .progCard {
-  border: 3px #02475E solid;
-padding: 7%;
+/* border: 3px #02475E solid; */
 border-radius: 20%;
 background-color: #d5d8d8;
+position: relative;
+top: 10%;
+margin: 100px;
+padding: 5%;
+}
+
+.progCard:hover {
+
+
+  box-shadow: 10px 10px 8px #888888;
+  
+
 }
 
 
 
+button {
+  background: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  font-family: 'Lato';
+  margin: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+
+ 
+}
+
+button:hover {
+  background: orange;
+  cursor: pointer;
+}
+
+
+/* #intropara {
+background-image: url(http://inthetravellab.com/wp-content/uploads/2013/09/IMG_6597.jpg);
+/* background-size: cover; 
+}*/
+
+
+p {
+  
+  text-align: justify;
+  margin: 2%;
+}
+h3 {
+  /* padding: %; */
+  text-align:center;
+  font-size: x-large;
+}
+
+ /* #intropara{
+width: 150%;
+margin-left: 0%;
+margin-right: 0%;
+}  */
+
+#bt0, #bt1, #bt2, #bt3, #bt4, #bt5,#bt6{
+  position: relative;
+
+  top: 80%;
+  float: right;
+  margin-top: 9%;
+  left: -250px;
+}
