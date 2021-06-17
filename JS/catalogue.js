@@ -139,6 +139,10 @@ function renderCode() {
       
       cart.saveToLocalStorage();
       document.getElementById(myId).removeEventListener("click",display)
+      // alert('added successfully!')
+      // swal("successfully added");
+      swal("Successfully added", "Thank you", "success");
+
      
       //  }
       }
@@ -239,7 +243,7 @@ function render(){
     btn.innerHTML = "Add to Cart";
     btn.setAttribute("type", "button");
     btn.setAttribute("id", `bt${i}`);
-    btn.setAttribute("")
+    // btn.setAttribute("")
     // // document.getElementById(`bt${i}`).addEventListener("click",()=>{
     // //   if(document.getElementById(`bt${i}`).clicked == true){
     // //   swal("Hello world!")

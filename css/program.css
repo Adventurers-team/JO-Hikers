@@ -124,7 +124,11 @@ main img {
 
 
 
-} 
+
+
+  } 
+
+
 
 main h2 {
 font-size: x-large;
@@ -253,10 +257,9 @@ button:hover {
 
 
 /* #intropara {
-background-image: url('http://inthetravellab.com/wp-content/uploads/2013/09/IMG_6597.jpg');
-width: 100%;
-
-} */
+background-image: url(http://inthetravellab.com/wp-content/uploads/2013/09/IMG_6597.jpg);
+/* background-size: cover; 
+}*/
 
 
 p {
@@ -265,13 +268,16 @@ p {
   margin: 2%;
 }
 h3 {
-  padding: 2%;
+  /* padding: %; */
   text-align:center;
+  font-size: x-large;
 }
 
-#intropara{
- width: 100%;
-}
+ /* #intropara{
+width: 150%;
+margin-left: 0%;
+margin-right: 0%;
+}  */
 
 #bt0, #bt1, #bt2, #bt3, #bt4, #bt5,#bt6{
   position: relative;
@@ -279,5 +285,5 @@ h3 {
   top: 80%;
   float: right;
   margin-top: 9%;
-  left: -150px;
+  left: -250px;
 }
