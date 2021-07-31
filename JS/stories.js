@@ -28,6 +28,7 @@ function submitting(event) {
   let story = event.target.storyText.value;
   let picture=event.target.picture.value;
 
+
   new Story(name,programs,story,picture)
   updateStorage();
   resultsDiv.textContent='';
